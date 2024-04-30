@@ -69,21 +69,21 @@ if __name__ == '__main__':
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/work.png)
 
-• Then i tried with <code>`'||length(upw)={length}#`</code> , i got success in calculating the length, like if the length is valid,the server will respond the uid but it seems if founded the upw of abcde which is a different user.
+- Then i tried with <code>`'||length(upw)={length}#`</code> , i got success in calculating the length, like if the length is valid,the server will respond the uid but it seems if founded the upw of abcde which is a different user.
 
-• Then started struggling with the idea of how to supply the admin uid, meanwhile i understood the exploitation part will require blind injection.
+- Then started struggling with the idea of how to supply the admin uid, meanwhile i understood the exploitation part will require blind injection.
 
-• The idea came in to use the [AND operator] && <code>`'||(uid='guest'&&length(upw)=5)#`</code>
+- The idea came in to use the [AND operator] && <code>`'||(uid='guest'&&length(upw)=5)#`</code>
 
-• It worked and the responded with the uid guest.
+- It worked and the responded with the uid guest.
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/length.png)
 
-• Now we can use concat function to supply admin value in uid <code>`concat('adm','in)`</code>, We also know that the flag value is stored in admin upw and starts with 'D' since the flag format is 'DH{.*}'.
+- Now we can use concat function to supply admin value in uid <code>`concat('adm','in)`</code>, We also know that the flag value is stored in admin upw and starts with 'D' since the flag format is 'DH{.*}'.
 
-• I supplied the payload <code>`'||(uid=concat('adm','in')&&substr(upw,1,1)='D')#` and yesss! we recieved the response uid as admin which means we succceded!
+- I supplied the payload <code>`'||(uid=concat('adm','in')&&substr(upw,1,1)='D')#` and yesss! we recieved the response uid as admin which means we succceded!
 
-• Now our idea is to  find the length of upw and below is the script i created that will help us to find the length!
+- Now our idea is to  find the length of upw and below is the script i created that will help us to find the length!
 
 
 
@@ -139,3 +139,5 @@ print(f"Flag : {flag}")
 ```
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/adv_flag.png)
+
+- Thanks.

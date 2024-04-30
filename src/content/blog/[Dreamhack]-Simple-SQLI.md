@@ -3,7 +3,6 @@ title: 'Dreamhack Simple-SQLI'
 description: '[CTF writeup'
 pubDate: 'Apr 23 2024'
 heroImage: '/gojo.jpeg'
-pinned: true
 ---
 
 > ChallengeName:Simple-SQLI
