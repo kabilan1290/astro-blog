@@ -9,8 +9,7 @@ pinned: true
 > Challenge Name : Simple-SQLI
 
 - The challenge invloves solving a simple sqlite injection and the source code for the challenge is given below!
-<img src="https://raw.githubusercontent.com/kabilan1290/kabilan1290.github.io/master/assets/img/desc_1.png">
-<br>
+![Description](desc_1.png)
 
 ```
 #!/usr/bin/python3
