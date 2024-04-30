@@ -1,12 +1,12 @@
 ---
 title: '[Dreamhack]Simple-SQLI'
-description: '[Dreamhack]Simple-SQLI writeup'
+description: '[CTF writeup'
 pubDate: 'Apr 23 2024'
 heroImage: '/117092881_p0.webp'
 pinned: true
 ---
 
-> Challenge Name : Simple-SQLI
+> ChallengeName:Simple-SQLI
 
 - The challenge invloves solving a simple sqlite injection and the source code for the challenge is given below!
 
