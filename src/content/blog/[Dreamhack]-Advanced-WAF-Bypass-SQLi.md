@@ -2,7 +2,7 @@
 title: 'Dreamhack Advanced WAF Bypass SQLI'
 description: 'ctf writeup'
 pubDate: 'apr 25 2024'
-heroImage: '/117092881_p3.webp'
+heroImage: '/mickey.jpeg'
 pinned: false
 ---
 
