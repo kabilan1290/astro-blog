@@ -7,9 +7,9 @@ export const SITE_DESCRIPTION = 'A random guy on internet writing about informat
 
 export const FAVICON_SRC = '/favicon.svg';
 
-export const AVATAR_SRC = '/avatar.avif';
+export const AVATAR_SRC = '/dp.jpeg';
 
-export const BIO = " okay ! hi all "
+export const BIO = "A random guy on internet writing about information security"
 
 export const GLOBAL_STYLE: 'quartz' | 'glass' | 'lightGlass' = 'glass'
 
