@@ -109,11 +109,11 @@ if __name__ == "__main__": app.run("0.0.0.0", PORT, debug=False)
 - We can bypass the password field by supplying <code>` ')||1-- `</code> and changing the username to admin.
 
 - Breakdown:
->1.<code>`')`</code> - we are closing the password query properly
->2.<code>`||`</code> - using OR operator
->3.<code>`1`</code> - 1 which will always result in true
->4.<code>`--`</code> - commenting out the reamining query
+1.<code>`')`</code> - we are closing the password query properly
+2.<code>`||`</code> - using OR operator
+3.<code>`1`</code> - 1 which will always result in true
+4.<code>`--`</code> - commenting out the reamining query
 
-- Final base64 cookie <code>`YWRtaW5APyomLTwvOzwkKX5+LyUuIX17L1wpeyV+OjwhKS0jJV0oXSQtJSh9XV1fJnwufV8tOyNgXjwmJSZdPmB+Kn4oXj4rLH0vIyomJjomfCN8JntdIy8jJV4uOyUtXiV9JF0pPFtcOil+Wz5cfnsjXlsvPztgI2ApKX1eXVwqO18vLDwnKXx8MS0t`</code>
+- Final base64 cookie `YWRtaW5APyomLTwvOzwkKX5+LyUuIX17L1wpeyV+OjwhKS0jJV0oXSQtJSh9XV1fJnwufV8tOyNgXjwmJSZdPmB+Kn4oXj4rLH0vIyomJjomfCN8JntdIy8jJV4uOyUtXiV9JF0pPFtcOil+Wz5cfnsjXlsvPztgI2ApKX1eXVwqO18vLDwnKXx8MS0t`
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/flag123.png)
