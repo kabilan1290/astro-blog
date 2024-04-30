@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = 'Game0v3r Blog';
 
-export const SITE_DESCRIPTION = 'A random guy on internet writing about information security';
+export const SITE_DESCRIPTION = 'A random guy on internet writing about information security...';
 
 export const FAVICON_SRC = '/favicon.svg';
 
