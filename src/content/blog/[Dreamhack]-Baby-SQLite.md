@@ -3,7 +3,7 @@ title: 'Dreamhack Baby SQLite'
 description: 'Ctf writeup'
 pubDate: 'Apr 24 2024'
 heroImage: '/dk.jpeg'
-pinned: true
+pinned: false
 ---
 
 > Challenge Name : Baby SQLite
