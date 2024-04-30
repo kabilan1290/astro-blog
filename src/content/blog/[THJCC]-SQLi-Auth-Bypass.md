@@ -114,6 +114,8 @@ if __name__ == "__main__": app.run("0.0.0.0", PORT, debug=False)
 3.<code>`1`</code> - 1 which will always result in true
 4.<code>`--`</code> - commenting out the reamining query
 
-- Final base64 cookie `YWRtaW5APyomLTwvOzwkKX5+LyUuIX17L1wpeyV+OjwhKS0jJV0oXSQtJSh9XV1fJnwufV8tOyNgXjwmJSZdPmB+Kn4oXj4rLH0vIyomJjomfCN8JntdIy8jJV4uOyUtXiV9JF0pPFtcOil+Wz5cfnsjXlsvPztgI2ApKX1eXVwqO18vLDwnKXx8MS0t`
+Final base64 cookie `YWRtaW5APyomLTwvOzwkKX5+LyUuIX17L1wpeyV+OjwhKS0jJV0oXSQtJSh9XV1fJnwufV8tOyNgXjwmJSZdPmB+Kn4oXj4rLH0vIyomJjomfCN8JntdIy8jJV4uOyUtXiV9JF0pPFtcOil+Wz5cfnsjXlsvPztgI2ApKX1eXVwqO18vLDwnKXx8MS0t`
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/flag123.png)
+
+- Thanks.
