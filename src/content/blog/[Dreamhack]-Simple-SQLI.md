@@ -1,8 +1,8 @@
 ---
-title: '[Dreamhack]Simple-SQLI'
+title: 'Dreamhack Simple-SQLI'
 description: '[CTF writeup'
 pubDate: 'Apr 23 2024'
-heroImage: '/117092881_p0.webp'
+heroImage: '/gojo.jpeg'
 pinned: true
 ---
 
