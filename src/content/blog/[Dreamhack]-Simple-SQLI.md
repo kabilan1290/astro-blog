@@ -9,7 +9,7 @@ pinned: true
 > Challenge Name : Simple-SQLI
 
 - The challenge invloves solving a simple sqlite injection and the source code for the challenge is given below!
-![Description](desc_1.png)
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/desc_1.png)
 
 ```
 #!/usr/bin/python3
@@ -76,13 +76,14 @@ app.run(host='0.0.0.0', port=8000)
 ```
 
 - It is easier to notice, the user input is directly appended to the sql query and we can simply craft a login bypass payload to solve this?
-<img src="https://raw.githubusercontent.com/kabilan1290/kabilan1290.github.io/master/assets/img/login1.png">
 
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/login1.png)
 
 
 - Using this in userid <code>`admin" or 1=1 -- -`</code> will help us login! Lets try...
-<img src="https://raw.githubusercontent.com/kabilan1290/kabilan1290.github.io/master/assets/img/guest_1.png">
-<br>
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/guest_1.png)
+
 
 - We are logged in as guest but we supplied userid as admin :0 , the catch here is <code>`userid = res[0]`</code> [ Seems like it checking the response of 0th row and in 0th row we are having the userid `guest`]
 
@@ -90,8 +91,9 @@ app.run(host='0.0.0.0', port=8000)
 
 - This will return the userid <code>`admin`</code> and we get the flag!
 
-<img src="https://raw.githubusercontent.com/kabilan1290/kabilan1290.github.io/master/assets/img/flag_1.png">
-<br>
+> Final payload : <code>`admin" or 1=1 LIMIT 1 OFFSET 1-- -`</code>
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/flag_1.png)
 
 
 - Thanks !
