@@ -2,14 +2,14 @@
 title: 'Blueprint Heist'
 description: 'CTF writeup'
 pubDate: 'Apr 23 2024'
-heroImage: '/gojo.jpeg'
+heroImage: '/luffy.png'
 ---
 
 > CHALLENGE NAME : Blueprint Heist
 > CTF            : HTB Business CTF 2024
 
 
-![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/1.png)
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/1.jpeg)
 
 - Challenge source file : https://github.com/kabilan1290/WebCTF/blob/master/HTB2024/BlueprintHeist/web_blueprint_heist.zip
 
