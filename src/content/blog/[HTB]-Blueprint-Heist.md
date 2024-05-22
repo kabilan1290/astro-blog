@@ -6,7 +6,7 @@ heroImage: '/luffy.png'
 pinned: true
 ---
 
-> CHALLENGE NAME : Blueprint Heist [HTB Business CTF 2024]
+><h5> CHALLENGE NAME : Blueprint Heist [HTB Business CTF 2024]</h5>
 
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/1.jpeg)
