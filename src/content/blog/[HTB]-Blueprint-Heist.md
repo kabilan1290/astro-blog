@@ -1,7 +1,7 @@
 ---
 title: 'Blueprint Heist'
 description: 'CTF writeup'
-pubDate: 'Apr 23 2024'
+pubDate: 'may 22 2024'
 heroImage: '/luffy.png'
 ---
 
