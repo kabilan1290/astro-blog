@@ -7,29 +7,23 @@ main {
   width: 100%;
 }
 
-
 article {
-
   width: 100%;
 
   h1, h2, h3, h4, h5, h6, p,
   ol, ul, blockquote, pre:has(code),
-  math
-  {
+  math {
     margin-bottom: .75em;
     margin-top: .75em;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
+  h1, h2, h3, h4, h5, h6, p {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     color: #1b1b17;
+    overflow-wrap: break-word; /* Add this line */
+    word-wrap: break-word; /* Add this line for older browser support */
+    word-break: break-word; /* Add this line to handle breaking words */
   }
 
   h1 {
