@@ -3,6 +3,7 @@ title: 'Blueprint Heist - Chaining madness'
 description: 'CTF writeup'
 pubDate: 'may 22 2024'
 heroImage: '/luffy.png'
+pinned: true
 ---
 
 > CHALLENGE NAME : Blueprint Heist [HTB Business CTF 2024]
