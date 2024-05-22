@@ -13,7 +13,7 @@ pinned: true
 
 - [Source File](https://github.com/kabilan1290/WebCTF/blob/master/HTB2024/BlueprintHeist/web_blueprint_heist.zip)
 
-### Initial Analysis:
+### <h5>Initial Analysis:</h5>
 
 - The challenge is placed in a medium web category, the first thing i noticed was routes, there were two routes `internal` and `public`.
 
