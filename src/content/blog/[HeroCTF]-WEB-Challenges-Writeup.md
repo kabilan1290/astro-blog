@@ -177,7 +177,7 @@ app.listen(PORT, () => {
 ### Dissecting app.js:
 - `process.chdir(path.join(__dirname, "samples"));` changes the current directory to `samples`
 - `/download/:file` where user supplied files [`req.params.file`] are passed to `path.basename()`
-- We can't do directory traversal due to the nature of path.basename working.
+- We can't do directory traversal due to the nature of `path.basename` working.
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/path.png)
 - If we give payload `/download/../../flag.txt`
 ```
@@ -200,7 +200,7 @@ Type ".help" for more information.
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/option.png)
 - If we pass the second argument as `object` it will be interpreted as  options parameter.
 - We can now change the `cwd` with the options `root`.
-- Our flag is in the format of `.flag.txt` , so we might need the options `dotfiles` adn the value as `allow`
+- Our flag is in the format of `.flag.txt` , so we might need the options `dotfiles` and the value as `allow`
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/format.png)
 - The final payload to solve the challenge `/download/.flag.txt?filename[root]=/&filename[dotfiles]=allow`
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/f.png)
