@@ -73,10 +73,15 @@ if __name__ == '__main__':
 
 - User input is accepted as email format and we can supply our payload as `{{7*7}}@gmail.com` ,It will get rendered and return as `49@gmail.com`
 - While we try to leverage the template injection to print flask config data through `{{config}}@gmail.com` , it get's failed and we got a empty response `@gmail.com`.
-- I tried invoking an error to understand what happened by supplying `{{config|int}}@gmail.com` and below is the result.
+- I tried invoking an error to understand what happened by supplying `{{config|int}}@gmail.com` in my local setup and below is the result.
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/undefined.png)
 
-- config and other objects were not available in the current context :0
+- `config` and other `objects` were not callable in the current context :0
+- Using the payload `{{lipsum.__globals__}}@gmail.com`,we were able to read the global objects.
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/global.png)
+
+- So possibly we are looking for the end payload `lipsum.__globals__.os.popen('ls').read()` but our payload should need to be in email format which basically rejects `(`,`)`,`[`,`]` making it almost impossible to construct a payload.
 
 
