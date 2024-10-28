@@ -103,4 +103,17 @@ class EmailModel(BaseModel):
 
 - The discussion gave a limelight that `email: EmailStr` will still accept name string eventhough the document says it had another property at place `NameEmail`.
 
+
 - Also looking at the documentation `Validate a name and email address combination, as specified by RFC 5322.`
+
+- And as per the RFC , we can use special character `(`,`)` inside the name element of the email using double quotes.
+
+- Hence we can construct our payload like ` "some test payload()" <ab@gmail.com>`.
+
+>`"Some text {{lipsum.__globals__.os.popen('cd ..&&./getflag').read()}}" <ab@gmail.com>`
+
+- The above payload is used to retrieve the flag.
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/flag.png)
+
+- That's a Interesting SSTI challenge that requires delving into documentation and understanding the email RFC!
