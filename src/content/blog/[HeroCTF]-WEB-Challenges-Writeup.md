@@ -13,7 +13,7 @@ heroImage: '/mickey.jpeg'
 
 - The challenge provides an input box for the user’s payload, which then gets rendered. But there’s a twist with how the input field processes data, so let's dive in and analyze the source code.
 
-### src
+### src:
 ```
 #app.py
 from flask import Flask, render_template, request
@@ -78,6 +78,7 @@ if __name__ == '__main__':
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/undefined.png)
 
 - `config` and other `objects` were not callable in the current context :0
+- But confimed builtin filters were working !
 - Using the payload `{{lipsum.__globals__}}@gmail.com`,we were able to read the global objects.
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/global.png)
@@ -117,3 +118,12 @@ class EmailModel(BaseModel):
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/flag.png)
 
 - That's a Interesting SSTI challenge that requires delving into documentation and understanding the email RFC!
+
+<br>
+<hr>
+
+> <h3>Challenge Name :</h3> SampleHub
+> <h3>Description :</h3> Discover SampleHub, the ultimate online repository for accessing a vast collection of sample files. With user-friendly navigation, and robust search features, SampleHub makes it easy to browse, access, and download files efficiently.
+
+
+
