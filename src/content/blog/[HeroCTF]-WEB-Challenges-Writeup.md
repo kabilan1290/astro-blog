@@ -2,7 +2,7 @@
 title: 'HeroCTF WEB Challenges Writeup'
 description: 'CTF writeup'
 pubDate: 'Oct 28 2024'
-heroImage: '/mickey.jpeg'
+heroImage: '/zoro.jpeg'
 ---
 
 > <h3>Challenge Name :</h3> Jinjatic
