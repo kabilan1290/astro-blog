@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
 - So possibly we are looking for the end payload `lipsum.__globals__.os.popen('ls').read()` but our payload should need to be in email format which basically rejects `(`,`)`,`[`,`]` making it almost impossible to construct a payload.
 
-### pydantic : email validator
+### pydantic : [email validator]
 
 - The application uses `from pydantic import BaseModel, EmailStr, ValidationError`:pydantic for email validation.
 ```
@@ -122,8 +122,71 @@ class EmailModel(BaseModel):
 <br>
 <hr>
 
-> <h3>Challenge Name :</h3> SampleHub
-> <h3>Description :</h3> Discover SampleHub, the ultimate online repository for accessing a vast collection of sample files. With user-friendly navigation, and robust search features, SampleHub makes it easy to browse, access, and download files efficiently.
+><h3>Challenge Name :</h3> SampleHub
+><h3>Description :</h3> Discover SampleHub, the ultimate online repository for accessing a vast collection of sample files. With user-friendly navigation, and robust search features, SampleHub makes it easy to browse, access, and download files efficiently.
+
+### Challenge flow:
+- The challenge provides with a search bar where we can search sample files and download it.
+
+```
+//Sample files
+[
+    { "filename": "sample.png", "extension": ".png", "description": "A Portable Network Graphics file that supports lossless data compression. Commonly used for web images and graphics." },
+    { "filename": "sample.jpg", "extension": ".jpg", "description": "A JPEG image file, widely used for digital photos and web graphics. It employs lossy compression to reduce file size." },
+    { "filename": "sample.pdf", "extension": ".pdf", "description": "A Portable Document Format file used for sharing documents while preserving formatting. It is viewable on any platform using a PDF reader." },
+    { "filename": "sample.doc", "extension": ".doc", "description": "A Microsoft Word document file format used for text documents. It supports rich formatting and can include images, tables, and other elements." },
+    { "filename": "sample.xls", "extension": ".xls", "description": "A Microsoft Excel spreadsheet file format that supports data analysis and calculation. It allows for complex formulas and data visualization." },
+    { "filename": "sample.mp3", "extension": ".mp3", "description": "An audio file format that uses lossy compression to reduce file size. It's commonly used for music and audio streaming." },
+    { "filename": "sample.mp4", "extension": ".mp4", "description": "A digital multimedia format commonly used for video files. It supports a wide range of codecs and is ideal for streaming." }
+]
+```
+- We can download the sample file through `/download/:file` ,lets read the source file to know more.
+- We only interested in the `app.js` !
+
+```
+const express = require("express");
+const path    = require("path");
+
+const app  = express();
+const PORT = 3000;
+
+app.use(express.static(path.join(__dirname, "public")));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
+app.get("/", (req, res) => {
+    res.render("index");
+});
+
+process.chdir(path.join(__dirname, "samples"));
+app.get("/download/:file", (req, res) => {
+    const file = path.basename(req.params.file);
+    res.download(file, req.query.filename || "sample.png", (err) => {
+        if (err) {
+            res.status(404).send(`File "${file}" not found`);
+        }
+    });
+});
 
 
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+```
+
+### Dissecting app.js:
+- `process.chdir(path.join(__dirname, "samples"));` changes the current directory to `samples`
+- `/download/:file` where user supplied files [`req.params.file`] are passed to `path.basename()`
+- We can't do directory traversal due to the nature of path.basename working.
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/flag.png)
+- If we give payload `/download/../../flag.txt`
+```
+~/samplehub                          
+❯ node
+Welcome to Node.js v22.9.0.
+Type ".help" for more information.
+> path.basename("../../flag.txt")
+'flag.txt'
+```
+- It returns the last portion of a path and trailing directory separators are ignored.
 
