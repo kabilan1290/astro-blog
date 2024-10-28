@@ -79,11 +79,11 @@ if __name__ == '__main__':
 
 - `config` and other `objects` were not callable in the current context :0
 - But confimed builtin filters were working !
-- Using the payload `{{lipsum.__globals__}}@gmail.com`,we were able to read the global objects.
+- Using the payload <code>`{{lipsum.__globals__}}@gmail.com`</code>,we were able to read the global objects.
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/global.png)
 
-- So possibly we are looking for the end payload `lipsum.__globals__.os.popen('ls').read()` but our payload should need to be in email format which basically rejects `(`,`)`,`[`,`]` making it almost impossible to construct a payload.
+- So possibly we are looking for the end payload <code>`lipsum.__globals__.os.popen('ls').read()`</code> but our payload should need to be in email format which basically rejects `(`,`)`,`[`,`]` making it almost impossible to construct a payload.
 
 ### pydantic : [email validator]
 
@@ -98,7 +98,7 @@ class EmailModel(BaseModel):
 
 >By default pydantic tries to coerce the input and will hence accept 'Some text `<a@b.com>'` for EmailStr to keep only the email part. What matters is what you want in your inner model !
 
-- Looking at the pydantic documentation `https://docs.pydantic.dev/latest/api/networks/#pydantic.networks.EmailStr`
+- Looking at the pydantic documentation <code>`https://docs.pydantic.dev/latest/api/networks/#pydantic.networks.EmailStr`</code>
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/confusion.png)
 
@@ -175,7 +175,7 @@ app.listen(PORT, () => {
 ```
 
 ### Dissecting app.js:
-- `process.chdir(path.join(__dirname, "samples"));` changes the current directory to `samples`
+- <code>`process.chdir(path.join(__dirname, "samples"));`</code> changes the current directory to `samples`
 - `/download/:file` where user supplied files [`req.params.file`] are passed to `path.basename()`
 - We can't do directory traversal due to the nature of `path.basename` working.
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/path.png)

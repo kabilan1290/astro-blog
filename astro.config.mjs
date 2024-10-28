@@ -17,6 +17,6 @@ export default defineConfig({
   image: {
     service: passthroughImageService()
   },
-  site: 'https://blog.plr.moe',
+  site: 'https://game0v3r.vercel.app',
   integrations: [mdx(), sitemap(), solidJs()]
 });
