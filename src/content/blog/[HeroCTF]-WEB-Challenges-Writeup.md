@@ -1,12 +1,12 @@
 ---
 title: 'HeroCTF WEB Challenges Writeup'
-description: 'ctf writeup'
+description: 'CTF writeup'
 pubDate: 'Oct 28 2024'
 heroImage: '/mickey.jpeg'
 ---
 
-> <h3>Challenge Name </h3>: Jinjatic
-> <h3>Description </h3>: A platform that allows users to render welcome email's template for a given customer, sounds great no ?
+> <h3>Challenge Name :</h3> Jinjatic
+> <h3>Description :</h3> A platform that allows users to render welcome email's template for a given customer, sounds great no ?
 
 ### Initial analysis:
 - From the challenge name and description, it’s clear where this is heading — SSTI!
@@ -71,4 +71,12 @@ if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
 ```
 
-- User input is accepted as email format and we can supply our payload as `{{7*7}}@gmail.com`
+- User input is accepted as email format and we can supply our payload as `{{7*7}}@gmail.com` ,It will get rendered and return as `49@gmail.com`
+- While we try to leverage the template injection to print flask config data through `{{config}}@gmail.com` , it get's failed and we got a empty response `@gmail.com`.
+- I tried invoking an error to understand what happened by supplying `{{config|int}}@gmail.com` and below is the result.
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/undefined.png)
+
+- config and other objects were not available in the current context :0
+
+

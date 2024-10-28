@@ -1,6 +1,6 @@
 ---
 title: 'THJCC SQLI Auth bypass'
-description: 'ctf writeup'
+description: 'CTF writeup'
 pubDate: 'apr 28 2024'
 heroImage: '/killua.jpeg'
 ---

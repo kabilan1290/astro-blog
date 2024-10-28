@@ -1,6 +1,6 @@
 ---
 title: 'Dreamhack Baby SQLite'
-description: 'Ctf writeup'
+description: 'CTF writeup'
 pubDate: 'Apr 24 2024'
 heroImage: '/dk.jpeg'
 pinned: false
