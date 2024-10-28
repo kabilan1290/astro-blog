@@ -196,4 +196,15 @@ Type ".help" for more information.
 - `res.download(file, req.query.filename)` , the final file is passed down to res.download and we can control the second parameter? YES !
 - Reading the documentation of the `res.download` function.
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/download.png)
+- We can pass down the optional options argument through `/download/something?filename['options']=something` , but there is no defnition as such? how does that work.
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/option.png)
+- If we pass the second argument as `object` it will be interpreted as  options parameter.
+- We can now change the `cwd` with the options `root`.
+- Our flag is in the format of `.flag.txt` , so we might need the options `dotfiles` adn the value as `allow`
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/format.png)
+- The final payload to solve the challenge `/download/.flag.txt?filename[root]=/&filename[dotfiles]=allow`
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/f.png)
+
+- Thanks for following the writeup until the end! 
+
 
