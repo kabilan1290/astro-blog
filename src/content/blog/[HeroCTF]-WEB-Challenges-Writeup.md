@@ -1,9 +1,8 @@
 ---
 title: 'Dreamhack Advanced WAF Bypass SQLI'
 description: 'ctf writeup'
-pubDate: 'oct 28 2024'
+pubDate: 'Oct 27 2024'
 heroImage: '/mickey.jpeg'
-pinned: false
 ---
 
 > <h3>Challenge Name </h3>: Jinjatic
