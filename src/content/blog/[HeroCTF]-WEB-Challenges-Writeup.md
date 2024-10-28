@@ -96,3 +96,11 @@ class EmailModel(BaseModel):
 `https://github.com/pydantic/pydantic/discussions/2550`
 
 >By default pydantic tries to coerce the input and will hence accept 'Some text `<a@b.com>'` for EmailStr to keep only the email part. What matters is what you want in your inner model !
+
+- Looking at the pydantic documentation `https://docs.pydantic.dev/latest/api/networks/#pydantic.networks.EmailStr`
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/confusion.png)
+
+- The discussion gave a limelight that `email: EmailStr` will still accept name string eventhough the document says it had another property at place `NameEmail`.
+
+- Also looking at the documentation `Validate a name and email address combination, as specified by RFC 5322.`
