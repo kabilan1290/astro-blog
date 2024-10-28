@@ -84,4 +84,15 @@ if __name__ == '__main__':
 
 - So possibly we are looking for the end payload `lipsum.__globals__.os.popen('ls').read()` but our payload should need to be in email format which basically rejects `(`,`)`,`[`,`]` making it almost impossible to construct a payload.
 
+### pydantic : email validator
 
+- The application uses `from pydantic import BaseModel, EmailStr, ValidationError`:pydantic for email validation.
+```
+class EmailModel(BaseModel):
+    email: EmailStr
+```
+- It uses the above class for creating email model by user supplied string.
+
+`https://github.com/pydantic/pydantic/discussions/2550`
+
+>By default pydantic tries to coerce the input and will hence accept 'Some text `<a@b.com>'` for EmailStr to keep only the email part. What matters is what you want in your inner model !
