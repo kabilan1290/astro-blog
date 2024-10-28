@@ -1,7 +1,7 @@
 ---
-title: 'Dreamhack Advanced WAF Bypass SQLI'
+title: 'HeroCTF WEB Challenges Writeup'
 description: 'ctf writeup'
-pubDate: 'Oct 27 2024'
+pubDate: 'Oct 28 2024'
 heroImage: '/mickey.jpeg'
 ---
 
@@ -71,3 +71,4 @@ if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
 ```
 
+- User input is accepted as email format and we can supply our payload as `{{7*7}}@gmail.com`
