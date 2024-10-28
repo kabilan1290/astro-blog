@@ -178,7 +178,7 @@ app.listen(PORT, () => {
 - `process.chdir(path.join(__dirname, "samples"));` changes the current directory to `samples`
 - `/download/:file` where user supplied files [`req.params.file`] are passed to `path.basename()`
 - We can't do directory traversal due to the nature of path.basename working.
-![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/flag.png)
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/path.png)
 - If we give payload `/download/../../flag.txt`
 ```
 ~/samplehub                          
@@ -189,4 +189,11 @@ Type ".help" for more information.
 'flag.txt'
 ```
 - It returns the last portion of a path and trailing directory separators are ignored.
+- Bypassing this seems not applicable as there is a url decoder before passing to path.basename function [ which eliminates double encoding and unicode encoding bypasses].
+
+### Hidden in plainsight:
+- There is also one more user input is passing to a function but is overlooked.
+- `res.download(file, req.query.filename)` , the final file is passed down to res.download and we can control the second parameter? YES !
+- Reading the documentation of the `res.download` function.
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/heroctf2024/download.png)
 
