@@ -6,20 +6,20 @@ heroImage: '/hinata.jpeg'
 pinned: false
 ---
 
-
-# Javascript For hackers notes:
-
 ### Hexadecimal:
 - Hexadecimal only works on strings and we can't use them as identifiers
-` "\x61" - a`
-` '\x61' - a`
-`function a(){}`
-`\x61()` - FAILS
-
+```
+"\x61" - a
+'\x61' - a
+function a(){}
+\x61() - FAILS
+```
 ### Unicode:
 - Unicode escape works in strings and can be used as identifiers.
-`'\u0061'` - a
-`"\u0061"` - a
+```
+'\u0061' - a
+"\u0061" - a
+```
 ```
 >>function a(){
     return 1+2}
@@ -47,15 +47,15 @@ for(let char of a){
 ```
  - a function to return string to unicode character and we can abuse it to use anywhere as identifier to functioncall.!
  - Unicode can also used inside curly braces!
- `'\u{61}'`
-`\u{61}\u{6c}\u{65}\u{72}\u{74}()` - alert()
-`"\u{00000000000000000000061}"` - a
+ - `'\u{61}'`
+- `\u{61}\u{6c}\u{65}\u{72}\u{74}()` - alert()
+- `"\u{00000000000000000000061}"` - a
 - unlimited amount of zero padding and exclusion of zero are allowed.
 
 ### Octal:
 - Octal escape can be only used inside strings.
-`\141` - a
-`142` - b 
+- `\141` - a
+- `\142` - b 
 
 ### Eval and Escapes:
 - Eval will decode the strings passed to it and then the engine will execute the decoded string.
@@ -68,4 +68,90 @@ for(let char of a){
 >>a
 1223
 ```
-`eval('\\u{61}=100000')` - we might need to double escape the unicode.
+- `eval('\\u{61}=100000')` - we might need to double escape the unicode.
+
+### Strings:
+- There are three types of strings!
+- Single Quoted
+- Double Quoted
+- Template Strings
+```
+Code	Result
+\b	Backspace
+\f	Form Feed
+\n	New Line
+\r	Carriage Return
+\t  Horizontal Tabulator
+\v	Vertical Tabulator
+\0  Null
+```
+- We can also escape any character which are not part of escape sequence and it will be treated as actual string
+- `"\H\e\l\l\o"` - Hello
+- We can use backslash at the end of the line to continue onto the next line.
+```
+>>>' i continue on to \
+    the next line'
+result:' i continue on to     the next line'
+>>>' i continue on to 
+    the next line'
+result:Uncaught SyntaxError: Invalid or unexpected token
+```
+- Templare strings have a feature that allow as to execute arbritrary javascript expressions whithin a placeholder `${}`
+```
+`${7*7}` - 49
+`${`${`${7*7}`}`}` - 49
+Template string placeholder itself is supported inside the template string placeholder.
+```
+- We can simply use template string after a function to call it and it's called tagged template strings.
+```
+alert`1337` - alert function with 1337 as argument
+```
+### Call and Apply:
+- Call is a property of every function that allows you to call it and change/use the `this.value` of the function in the first argument and any subsequent arguments are passed to that function.
+
+```
+>>function x(){
+    console.log(this.callmebro)}
+>>let hmm = {callmebro:"hmm really?"}
+>>x.call(hmm)
+hmm really?
+----------------------------------------------------
+>>function x(){
+    console.log(arguments[0])
+    console.log(arguments[1])
+    console.log(this)
+}
+
+>>x.call(null,1,2)
+
+1
+2
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+```
+- If we do not suply anything to the `this` value in the call function, it will use the window object,the above is the example where we supplied null in the first argument of the call function and it defaults to window object.
+- But in strict mode it will be null instead of window object.
+
+```
+>>function x(){
+    "use strict";
+    console.log(this)}
+    
+>>x.call(null)
+
+null
+```
+- The apply function is same as call function but we can supply an array of arguments in the second argument.
+
+```
+>>function x(){
+    console.log(arguments[0])
+    console.log(arguments[1])
+    console.log(this)
+}
+
+>>x.apply(null,[1,2])
+
+1
+2
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+```
