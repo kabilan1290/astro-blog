@@ -155,3 +155,33 @@ null
 2
 Window {window: Window, self: Window, document: document, name: '', location: Location, …}
 ```
+
+### Javascript without parentheses:
+#### valueOf:
+>JavaScript calls the valueOf method to convert an object to a primitive value. You rarely need to invoke the valueOf method yourself; JavaScript automatically invokes it when encountering an object where a primitive value is expected.
+
+```
+let obj = {valueOf(){return 1}};
+obj+1 //2
+```
+
+valueOf is called on almost every object because it needs to extract the primitive value right?
+here the above when two value's are getting added and it need to extract the value of `obj` and hence the function will be called and return the value 1 and it will get added to result 2.
+
+what if we abuse the valueOf?
+we set the valueOf to alert!
+
+let obj = {valueOf:alert};
+obj+1 // Illegal invocationobj+1
+
+It did'nt worked because alert needs `this` object to be window but here it is `obj`
+
+```
+valueOf=alert
+window+1 // calls alert()
+toString=alert
+window+'a' // calls alert()
+// toString works the same
+```
+
+
