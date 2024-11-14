@@ -2,7 +2,7 @@
 title: 'Javascript for Hackers - Notes '
 description: 'Book notes'
 pubDate: 'nov 11 2024'
-heroImage: '/hinata.jpeg'
+heroImage: '/dabi.jpg'
 pinned: false
 ---
 # Part 1 : Basics
