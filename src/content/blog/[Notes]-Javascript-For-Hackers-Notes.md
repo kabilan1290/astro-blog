@@ -5,7 +5,7 @@ pubDate: 'nov 11 2024'
 heroImage: '/hinata.jpeg'
 pinned: false
 ---
-
+# Part 1 : Basics
 ### Hexadecimal:
 - Hexadecimal only works on strings and we can't use them as identifiers
 ```
