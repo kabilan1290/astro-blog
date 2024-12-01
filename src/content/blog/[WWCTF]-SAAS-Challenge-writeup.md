@@ -10,7 +10,9 @@ pinned: true
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/saas/challenge.jpeg)
 
-- The challenge was so much fun and im really happy about getting the first blood :D !
+- The challenge was so much fun,at the end of the CTF there were two solves on the challenge and im really happy about getting the first blood :D !
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/saas/blood.jpg)
 
 - By reading the challenge description we can assume the challenge might be an mutation based XSS issue [since the use of custom html sanitizer on server side].
 
