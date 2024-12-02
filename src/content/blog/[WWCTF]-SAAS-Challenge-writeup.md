@@ -480,3 +480,9 @@ if __name__ == "__main__":
 
 > FLAG : wwf{HTML_r0UNdTR1P_f0r_tH3_W1N_4Nd_S3RV3R_5ID3_H7ML_S4N1T1Z4TI0N_1S_B4D_1D34}
 
+## Update:
+
+- After solving the challenge, i was basically fuzzing the `URL constructor` to find any new unicode points for a bypass and weridly i found the below and it can be used to bypass the restriction.
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/saas/carbon.png)
+
