@@ -71,7 +71,7 @@ pinned: false
 - If we can control the path , we can supply our paylod through `/&text=payload/` and execute xss with it.
 - Obviously we can control the path but there is one more problem we need to tackle is to use a non existent path ![ our payload would be an non existent path which will result in 404]
 - We can use path traversing and path normalizing to overcome the 404 error.
-- Combining everything our final payload looks likt this `https://challenge-0125.intigriti.io/&text=%3Cimg%20src='1'%20onerror=alert(document.domain)%3E%2f..%2fchallenge?text=123&text=?text`
+- Combining everything our final payload looks like this `https://challenge-0125.intigriti.io/&text=%3Cimg%20src='1'%20onerror=alert(document.domain)%3E%2f..%2fchallenge?text=123&text=?text`
 - Since the regex match `&text=` our xss payload will be passed to the innerHTML sink [ XSS() function will return false as it searches only the query param and hash fragment of the URL]
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/janxss/xss.png)
 
