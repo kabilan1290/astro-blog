@@ -6,7 +6,7 @@ heroImage: '/gara.jpg'
 pinned: false
 ---
 
-> TITLE : Intigriti's January Challenge by Godson
+> TITLE : Intigriti's January Challenge by Godson<br>
 > URL : https://challenge-0125.intigriti.io/
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/janxss/title.jpg)
@@ -60,7 +60,7 @@ pinned: false
 - lets understand the structure of URL before solving the challenge.
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/janxss/url.jpg)
 
-> window.location.search - returns the query string from the URL.
+> window.location.search - returns the query string from the URL.<br>
 > window.location.hash - returns the hash fragment from the URL.
 
 - Both query param and hash has an xss check ! other than that what we can control on the URL?
