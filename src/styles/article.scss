@@ -10,6 +10,7 @@ main {
 }
 
 article {
+  font-family: 'Share Tech Mono', monospace;
   width: 100%;
 
   h1, h2, h3, h4, h5, h6, p,
@@ -100,7 +101,8 @@ article {
 
     code span {
       color: $color-slate-50;
-      font-family: 'Fira Code', monospace;
+      font-family: 'Share Tech Mono', monospace;
+
     }
   }
 
