@@ -18,6 +18,8 @@ const posts = (await getCollection('blog'))
 <html lang="en">
 <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+      <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <Header/>
@@ -66,6 +68,7 @@ const posts = (await getCollection('blog'))
 
 <style>
     main {
+        font-family: 'Share Tech Mono', monospace;
         max-width: 70rem;
         width: 100%;
         margin: 3rem auto;
