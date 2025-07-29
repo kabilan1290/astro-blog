@@ -3,13 +3,13 @@
 
 export const SITE_TITLE = 'Game0v3r Blog';
 
-export const SITE_DESCRIPTION = 'நான் வீழ்வேனென்று நினைத்தாயோ?';
+export const SITE_DESCRIPTION = 'A random guy on internet writing about information security...';
 
 export const FAVICON_SRC = '/favicon.jpeg';
 
 export const AVATAR_SRC = '/dp.jpeg';
 
-export const BIO = "A random guy on internet writing about information security"
+export const BIO = "நான் வீழ்வேனென்று நினைத்தாயோ?"
 
 export const GLOBAL_STYLE: 'quartz' | 'glass' | 'lightGlass' = 'glass'
 
