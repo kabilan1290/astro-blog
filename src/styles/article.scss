@@ -65,6 +65,7 @@ article {
   }
 
   blockquote {
+    font-family: 'Share Tech Mono', monospace;
     background-color: rgba($color-slate-50, 0.3);
     backdrop-filter: blur(18px);
     padding: 1rem;
@@ -111,10 +112,11 @@ article {
   }
 
   code {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Share Tech Mono', monospace;
   }
 
   a {
+    font-family: 'Share Tech Mono', monospace;
     color: $color-primary-500;
     text-decoration: underline;
     text-underline-offset: 0.1em;
@@ -127,6 +129,7 @@ article {
   }
 
   li {
+    font-family: 'Share Tech Mono', monospace;
     margin-left: 2em;
     margin-bottom: 0.5em;
 
