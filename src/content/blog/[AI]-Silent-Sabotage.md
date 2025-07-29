@@ -38,7 +38,7 @@ pinned: false
 
 > Highlight, Summarize, Compromise?
 
-<h1> AI summarizer browser extensions:</h1>
+<h3> AI summarizer browser extensions:</h3>
 
 What are these extensions?
 
@@ -50,4 +50,17 @@ What are these extensions?
 
 - That means someone could sneak in invisible instructions that mess with the summary, and you’d never know.
 
-<h1> Google summarizer api [Summarize with built-in AI] </h1>
+<h3> Google summarizer api [Summarize with built-in AI] </h3>
+
+- We’re going to build our own browser extension using the Summarizer API—and yes, we’re also going to exploit it.
+
+<b>Here’s how this all came together:</b>
+
+- We'll create a simple browser extension that taps into the new Summarizer API available from Chrome 138 (stable). This API uses Gemini Nano under the hood to generate on-device summaries.
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/summarize.jpeg)
+
+- Why this API? Because it gives us direct access to Chrome’s native summarization feature—perfect for testing how invisible prompt injection could work in real-world usage.
+
+- Funny enough, this whole research kicked off because a friend casually dropped a link to Chrome’s release notes in a chat [ I still don't know why he shared though].
+
