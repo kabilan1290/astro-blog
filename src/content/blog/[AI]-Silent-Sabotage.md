@@ -81,11 +81,12 @@ const summarizer = await Summarizer.create({
   expectedInputLanguages: ["en-US"],
   outputLanguage: "en-US",
 });
+```
+- // ouptput : undefined
 
-// ouptput : undefined
-
+```
 const summary = await summarizer.summarize("Nika Nika no mi");
 console.log(summary);
-
-// output : The text discusses Nika Nika no mi, a devil fruit from the One Piece anime, but provides no additional information or analysis beyond its name.
 ```
+
+- // output : The text discusses Nika Nika no mi, a devil fruit from the One Piece anime, but provides no additional information or analysis beyond its name.
