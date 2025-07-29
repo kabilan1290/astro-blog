@@ -8,6 +8,8 @@ pinned: false
 
 > What if AI could be tricked without anyone noticing?
 
+![nocturnmachine](https://pbs.twimg.com/media/GwYUrIMWUAAow9D?format=jpg&name=medium)
+
 - Imagine trusting an AI summarizer to give you a trustable output and instead it delivers manipulation that only the AI sees, not YOU.
 
 - Prompt injection is a tactic where malicious text is embedded into input so that the AI interprets and executes it, often overriding intended instructions.
