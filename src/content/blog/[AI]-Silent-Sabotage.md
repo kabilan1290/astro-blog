@@ -30,12 +30,10 @@ pinned: false
 
 - When the victim receive the email and click on `Summarize this email` through gemini, it parses the invisible directive, and appends the attacker’s phishing warning to its summary output.
 
-![image](https://storage.googleapis.com/0din-prod-prod-0din-assets/o6o8ak415mpzru2wejzg191trv1h?GoogleAccessId=app-storage-admin%40moz-fx-0din-prod.iam.gserviceaccount.com&Expires=1753785973&Signature=o8p7mkPVWDj8QuEDjri4B47uZ1deTVeJaqDFiIiwEgE5fsqev5hmfxCxz%2FIIySWEpMoTPin64zsDF9FuOpJJy265a6Ia036hXIuBKvK8VPWRHNjvVF8CoaoiQnWEiy1delb9dNjfSFb2S4zc%2FK%2FgcTidmAeDiik1JLl5Bk1CUy6OOUO3pY8cCCKKmtLZfZtcdbnjc%2BGFKwBgl11uxF2mb8Ns1WVgSsU4DcyNJWwUSoXOPT9RQdD7d%2B1eNwcyHvakAXRUIdLlImYxZz9Ae6RpKNpOVae8S4JjGE6OuQKUDB%2BKQOCnG%2F%2BSwlfaFcz6DlZm1LtM9g1zc03j4hCxh1fWew%3D%3D&response-content-disposition=inline%3B+filename%3D%22Pasted+image+20250702004822.png%22%3B+filename%2A%3DUTF-8%27%27Pasted%2520image%252020250702004822.png&response-content-type=image%2Fpng)
+![image](https://0din.ai/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDExNywicHVyIjoiYmxvYl9pZCJ9fQ==--48337021fe798d688e47a7109e68a7232193bad3/Pasted%20image%2020250702004822.png)
 
-- The above is a quick POC of the invisible prompt injection attack that was recently disclosed. And yep, we’re just getting warmed up. 
+- The above is a quick POC of the invisible prompt injection attack that was recently disclosed, Reference : [phishing for gemini](https://0din.ai/blog/phishing-for-gemini) and yep, we’re just getting warmed up. 
 
-- Reference : [phishing for gemini](https://0din.ai/blog/phishing-for-gemini)
-
-- In this post, we’ll take a look at a sneaky problem with AI summarizer browser extensions—those tools that summarize stuff when you highlight texts on a webpage. Turns out, they might be way easier to trick than you'd think.
+- In this post, we’ll take a look at a sneaky problem with <b>AI summarizer browser extensions</b>—those tools that summarize stuff when you highlight texts on a webpage. Turns out, they might be way easier to trick than you'd think.
 
 
