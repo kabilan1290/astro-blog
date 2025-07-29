@@ -36,4 +36,16 @@ pinned: false
 
 - In this post, we’ll take a look at a sneaky problem with <b>AI summarizer browser extensions</b>—those tools that summarize stuff when you highlight texts on a webpage. Turns out, they might be way easier to trick than you'd think.
 
+> Highlight, Summarize, Compromise?
 
+<b> AI summarizer browser extensions:<b>
+
+What are these extensions?
+
+- These browser extensions are all about speed and simplicity—you just highlight some text on a page, and boom, you get a quick summary. 
+
+- Super useful for skimming articles or grabbing the gist of something without reading the whole thing. 
+
+- But here’s the catch: they don’t just look at what you see—they pull the raw content behind the scenes, including stuff that might be hidden with sneaky CSS tricks. 
+
+- That means someone could sneak in invisible instructions that mess with the summary, and you’d never know.
