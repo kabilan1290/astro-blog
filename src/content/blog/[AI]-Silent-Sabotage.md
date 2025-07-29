@@ -24,7 +24,7 @@ pinned: false
 
 - The victim never sees the prompt in the email itself, only in the AI-generated summary. 
 
-![image](https://storage.googleapis.com/0din-prod-prod-0din-assets/0fyne6ss5w4re31m2sx5jt10z0sg?GoogleAccessId=app-storage-admin%40moz-fx-0din-prod.iam.gserviceaccount.com&Expires=1753785751&Signature=BH5mmZI54yUF1WqtCm%2FRauVcOvxL7PtQ8scYiBLn%2BkthGkZwJhml%2BCIxL0VNgsnPe6ZWxeFBmGb%2BgiPn7ghVwoHvehPEEXXZ0IgZLSYu0jg4pQ0XfGaSruNLqYPC%2FrVdwfhv7q%2BJJSij4l5MM2w1qFxFIoQdusZuuNUP0GwFGKAoxfcDaJ3iiR9QENwVmXtRqemViesYlbu%2FdW5GDoht%2BRmZfnT91JEFjekfMMaWDoiy3ixqlQzdA%2BljFS4dzKKs0zZ1mEErp9w4vB4ewZShoq3C1%2Fsw6FcFlbuf33hGxJ2PzaydONtslW16%2FePUvwcq9ErWJFbWZavPeFoytNJpOQ%3D%3D&response-content-disposition=inline%3B+filename%3D%22image.png%22%3B+filename%2A%3DUTF-8%27%27image.png&response-content-type=image%2Fpng)
+![image](https://0din.ai/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDExNiwicHVyIjoiYmxvYl9pZCJ9fQ==--50368322d3731e85f6205a8d1df7c0ab85a4a81d/image.png)
 
 - The attacker embeds a hidden admin style instruction using the CSS property `font-size:0` or `color:white` and send it to victim.
 
@@ -32,6 +32,10 @@ pinned: false
 
 ![image](https://storage.googleapis.com/0din-prod-prod-0din-assets/o6o8ak415mpzru2wejzg191trv1h?GoogleAccessId=app-storage-admin%40moz-fx-0din-prod.iam.gserviceaccount.com&Expires=1753785973&Signature=o8p7mkPVWDj8QuEDjri4B47uZ1deTVeJaqDFiIiwEgE5fsqev5hmfxCxz%2FIIySWEpMoTPin64zsDF9FuOpJJy265a6Ia036hXIuBKvK8VPWRHNjvVF8CoaoiQnWEiy1delb9dNjfSFb2S4zc%2FK%2FgcTidmAeDiik1JLl5Bk1CUy6OOUO3pY8cCCKKmtLZfZtcdbnjc%2BGFKwBgl11uxF2mb8Ns1WVgSsU4DcyNJWwUSoXOPT9RQdD7d%2B1eNwcyHvakAXRUIdLlImYxZz9Ae6RpKNpOVae8S4JjGE6OuQKUDB%2BKQOCnG%2F%2BSwlfaFcz6DlZm1LtM9g1zc03j4hCxh1fWew%3D%3D&response-content-disposition=inline%3B+filename%3D%22Pasted+image+20250702004822.png%22%3B+filename%2A%3DUTF-8%27%27Pasted%2520image%252020250702004822.png&response-content-type=image%2Fpng)
 
-- The above is a quick POC of the invisible prompt injection attack that was recently disclosed. And yep, we’re just getting warmed up. In this post, we’ll take a look at a sneaky problem with AI summarizer browser extensions—those tools that summarize stuff you highlight on a webpage. Turns out, they might be way easier to trick than you'd think.
+- The above is a quick POC of the invisible prompt injection attack that was recently disclosed. And yep, we’re just getting warmed up. 
+
+- Reference : [phishing for gemini](https://0din.ai/blog/phishing-for-gemini)
+
+- In this post, we’ll take a look at a sneaky problem with AI summarizer browser extensions—those tools that summarize stuff when you highlight texts on a webpage. Turns out, they might be way easier to trick than you'd think.
 
 
