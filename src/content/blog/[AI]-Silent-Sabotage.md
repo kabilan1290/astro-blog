@@ -63,6 +63,6 @@ What are these extensions?
 - Why this API? Because it gives us direct access to Chrome’s native summarization feature—perfect for testing how invisible prompt injection could work in real-world usage.
 
 - Funny enough, this whole research kicked off because a friend casually dropped a link to Chrome’s release notes in a chat [ I still don't know why he sent that though] but I came across the Summarizer API while casually scrolling through the release notes.
-<center><br>
+<br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/jo.jpeg)
-</center></br>
+</br>
