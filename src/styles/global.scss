@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   outline: none;
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   box-sizing: border-box;
   color: #1b1b17;
 }
 
 body {
+  font-family: 'Share Tech Mono', monospace;
   background-image: url('/background.jpeg') , linear-gradient(to right, #ffcdb9, #FFC0CB) ;
   background-size: cover;
   background-repeat: no-repeat;
