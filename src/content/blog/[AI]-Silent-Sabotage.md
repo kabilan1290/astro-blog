@@ -66,3 +66,26 @@ What are these extensions?
 <br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/jo.jpeg)
 </br>
+
+- Basically, the Summarizer API makes it super easy to generate quick summaries of webpage content directly from the browser through gemini nano. 
+
+- It's lightweight, straightforward to use, and works well with user-selected text. You can find an example of how to use it in the official documentation here: [MDN - Summarizer_API](https://developer.mozilla.org/en-US/docs/Web/API/Summarizer_API/Using)
+
+```
+const summarizer = await Summarizer.create({
+  sharedContext:
+    "A general summary to help a user decide if the text is worth reading",
+  type: "tldr",
+  length: "short",
+  format: "markdown",
+  expectedInputLanguages: ["en-US"],
+  outputLanguage: "en-US",
+});
+
+// ouptput : undefined
+
+const summary = await summarizer.summarize("Nika Nika no mi");
+console.log(summary);
+
+// output : The text discusses Nika Nika no mi, a devil fruit from the One Piece anime, but provides no additional information or analysis beyond its name.
+```
