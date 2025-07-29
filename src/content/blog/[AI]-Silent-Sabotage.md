@@ -18,5 +18,9 @@ pinned: false
 
 > Google Gemini G-Suite Invisible Prompt Injection Vulnerability:
 
-- A Invisible prompt injection vulnerability in Google Gemini Gmail Workspace allows attackers to embed hidden text instructions in an email. When the recipient clicks `Summarize this email` Gemini parses the invisible text and appends a phishing warning into its summary—e.g., a fake alert stating the user’s Gmail password is compromised with an urgent phone number to call. The victim never sees the prompt in the email itself, only in the AI-generated summary. 
+- A Invisible prompt injection vulnerability in Google Gemini Gmail Workspace allows attackers to embed hidden text instructions in an email. 
+
+- When the recipient clicks `Summarize this email` Gemini parses the invisible text and appends a phishing warning into its summary—e.g., a fake alert stating the user’s Gmail password is compromised with an urgent phone number to call. 
+
+- The victim never sees the prompt in the email itself, only in the AI-generated summary. 
 
