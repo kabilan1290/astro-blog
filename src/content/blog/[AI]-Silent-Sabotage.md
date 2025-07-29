@@ -38,7 +38,7 @@ pinned: false
 
 > Highlight, Summarize, Compromise?
 
-<b> AI summarizer browser extensions:<b>
+<h1> AI summarizer browser extensions:</h1>
 
 What are these extensions?
 
@@ -49,3 +49,5 @@ What are these extensions?
 - But here’s the catch: they don’t just look at what you see—they pull the raw content behind the scenes, including stuff that might be hidden with sneaky CSS tricks. 
 
 - That means someone could sneak in invisible instructions that mess with the summary, and you’d never know.
+
+<h1> Google summarizer api [Summarize with built-in AI] </h1>
