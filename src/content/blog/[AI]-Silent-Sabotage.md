@@ -154,7 +154,7 @@ console.log(summary);
 
 - While the above technique is a failure, We’ve found that using either `opacity: 0` or `font-size: 0` is surprisingly effective for hiding text in plain sight.
 
-- These techniques make the content completely invisible—even if a user double-clicks or tries to highlight it, nothing appears visually. But here’s the catch: the hidden text still exists in the DOM. That means if someone copies the content or sends it to an AI for analysis, the hidden message is carried along and can influence the output.
+- These techniques make the content completely invisible—even if a user double-clicks or tries to highlight it, nothing appears visually. But here’s the catch: the hidden text still exists when user copies upto the highlighted part. That means if someone copies the content or sends it to an AI for analysis, the hidden message is carried along and can influence the output without the user knowing.
 
 ```
     .malicious {
