@@ -95,4 +95,21 @@ console.log(summary);
 <br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/gif.gif)
 </br>
+- When you highlight any portion of text on a webpage and click the extension, it sends the selected content to the Summarizer API and returns a summary.
+- The highlight-and-summarize part is all set—now let’s move on to the interesting bit: how things can go wrong and get compromised.
+
+> The Art of Hiding Text with CSS:
+
+- One of the important tricks in exploiting AI summarizers lies in hiding text from the user—but not from the AI model.
+
+- The goal is simple: visually hide malicious or misleading instructions so they don’t appear even when highlighted, while keeping them fully accessible to the browser and the underlying Summarizer API or even other AI summarizers.
+
+- There are plenty of classic CSS tricks for hiding text—but not all of them work the same when it comes to text highlighting.
+
+<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="QwjGLXw" data-pen-title="caught" data-user="Game0v3r-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/Game0v3r-the-encoder/pen/QwjGLXw">
+  caught</a> by Game0v3r (<a href="https://codepen.io/Game0v3r-the-encoder">@Game0v3r-the-encoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
 
