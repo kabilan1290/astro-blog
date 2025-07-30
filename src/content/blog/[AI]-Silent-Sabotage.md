@@ -152,6 +152,10 @@ console.log(summary);
 
 <br>
 
+- While the above technique is a failure, We’ve found that using either `opacity: 0` or `font-size: 0` is surprisingly effective for hiding text in plain sight.
+
+- These techniques make the content completely invisible—even if a user double-clicks or tries to highlight it, nothing appears visually. But here’s the catch: the hidden text still exists in the DOM. That means if someone copies the content or sends it to an AI for analysis, the hidden message is carried along and can influence the output.
+
 ```
     .malicious {
       opacity: 0;
@@ -160,6 +164,8 @@ console.log(summary);
      font-size:0
     }
 ```
+
+- Then try copying and pasting the text from the right-side box to see for yourself how these technique works.
 
 <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="empBOjZ" data-pen-title="visible confusion" data-user="Game0v3r-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/Game0v3r-the-encoder/pen/empBOjZ">
