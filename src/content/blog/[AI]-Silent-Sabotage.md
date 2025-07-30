@@ -106,6 +106,10 @@ console.log(summary);
 
 - There are plenty of classic CSS tricks for hiding text—but not all of them work the same when it comes to text highlighting.
 
+- Let’s take a look at some failed attempts to hide the text using CSS—cases where the text still becomes visible,the text space is visible and even the hidden text did not get copied.
+
+- Try copying and pasting the text from the right-side box to see for yourself how these methods don’t quite work.
+
 ```
     Visibility Hidden TEXT  {
       color: white;
@@ -126,6 +130,8 @@ console.log(summary);
     color:transparent;
     }
 ```
+
+- For a smoother viewing experience, click the 0.5× option in the toolbar to scale down the embed size.
 
 <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="QwjGLXw" data-pen-title="caught" data-user="Game0v3r-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/Game0v3r-the-encoder/pen/QwjGLXw">
