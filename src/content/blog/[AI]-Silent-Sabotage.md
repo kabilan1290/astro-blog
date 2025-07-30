@@ -92,7 +92,6 @@ console.log(summary);
 - // output : The text discusses Nika Nika no mi, a devil fruit from the One Piece anime, but provides no additional information or analysis beyond its name.
 
 - Great—we now understand how the Summarizer API works. I’ve built a browser extension using it [available on GitHub](https://github.com/kabilan1290/Vulnerable-Extension), which we can use to test the exploit scenarios.
-
 <br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/gif.gif)
 </br>
