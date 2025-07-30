@@ -186,7 +186,18 @@ console.log(summary);
 <br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/2.jpeg)
 </br>
-- Test
+- We observed a strategic improvement in the outcome, indicating that our injection was successful through the use of the prompt overdose attack.
 <br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/3.jpeg)
 </br>
+
+- What makes this vector particularly insidious is its compatibility with otherwise legitimate-looking input: HTML emails, blog posts, and even collaborative documents.
+
+> Final Thoughts
+- Invisible prompt injection represents a quiet but deeply potent threat in the age of AI summarization. 
+- As we’ve demonstrated, attackers don’t need flashy exploits—just cleverly hidden instructions embedded in plain-looking content. What makes this particularly dangerous is how seamlessly it blends into legitimate workflows, influencing summaries without ever alerting the user.
+- While tools like Gemini Nano and summarizer extensions are built for convenience and speed, their growing reliance on hidden, behind-the-scenes parsing leaves them vulnerable to subtle forms of manipulation. 
+- The prompt overdose technique, though simple in principle, underscores just how easily language models can be steered when the right input balance is struck.
+- As AI continues to mediate the way we consume and trust information, it’s critical that developers, researchers, and users alike start questioning not just what AI says—but what it might have been quietly told to say.
+
+<b>Silent sabotage isn't science fiction—it's CSS.<b>
