@@ -177,19 +177,16 @@ console.log(summary);
 - While CSS might offers various techniques for hiding text, these two methods are more direct and align more effectively with our implementation strategy.
 
 - Moving on to the exploit demonstration, we’ll create a small healthcare related demo page displaying the patient's symptoms along with our malicious hidden content instructions. To summarize, we’ll then use the browser extension to reveal the results and observe the outcome.
-
 <br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/1.jpeg)
 </br>
-
 - The result was not as expected. Despite injecting our hidden instructions, the AI appeared to disregard them—likely due to the overwhelming presence of legitimate content compared to the relatively small amount of injected fake data. It seems the AI was influenced primarily by the legitimate portion of the page and generated its summary accordingly.
 
 - We're going to turn this around using a technique I refer to as <b>prompt overdose<b>—by injecting a significantly larger volume of consistent fake data, we aim to overwhelm the AI's contextual processing, effectively forcing it to incorporate the injected content into its summary.
-
-  <br>
+<br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/2.jpeg)
 </br>
-
-  <br>
+- Test
+<br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/3.jpeg)
 </br>
