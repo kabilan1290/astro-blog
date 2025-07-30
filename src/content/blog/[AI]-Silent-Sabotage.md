@@ -106,10 +106,32 @@ console.log(summary);
 
 - There are plenty of classic CSS tricks for hiding text—but not all of them work the same when it comes to text highlighting.
 
+```
+    Visibility Hidden TEXT  {
+      color: white;
+      visibility: hidden;
+    }
+
+    Display set to NONE {
+      color: white;
+      display: none;
+    }
+
+    Content Visibility set to HIDDEN {
+      color: white;
+      content-visibility: hidden;
+    }
+
+    Color set to Transparent  {
+    color:transparent;
+    }
+```
+
 <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="QwjGLXw" data-pen-title="caught" data-user="Game0v3r-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/Game0v3r-the-encoder/pen/QwjGLXw">
   caught</a> by Game0v3r (<a href="https://codepen.io/Game0v3r-the-encoder">@Game0v3r-the-encoder</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
 
