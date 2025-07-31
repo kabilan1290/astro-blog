@@ -206,7 +206,7 @@ console.log(summary);
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/sider.jpeg)
 </br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7Oj50-Rjep4?si=LA3LFbx1KNVF6PKa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="400" src="https://www.youtube.com/embed/7Oj50-Rjep4?si=LA3LFbx1KNVF6PKa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 > Final Thoughts
 - <b>Invisible prompt injection<b> represents a quiet but deeply potent threat in the age of AI summarization. 
@@ -214,4 +214,4 @@ console.log(summary);
 - The prompt overdose technique, though simple in principle, underscores just how easily language models can be steered when the right input balance is struck.
 - As AI continues to mediate the way we consume and trust information, it’s critical that developers, researchers, and users alike start questioning not just what AI says—but what it might have been quietly told to say.
 
-<h3> Silent sabotage isn't science fiction—it's CSS.<h3>
+<center><h3> Silent sabotage isn't science fiction—it's CSS.<h3><center>
