@@ -14,7 +14,7 @@ pinned: false
 
 - Prompt injection is a tactic where malicious text is embedded into input so that the AI interprets and executes it, often overriding intended instructions.
 
-- The twist: Invisible prompt injection. Here, prompts are hidden entirely via zero‑width characters, white-on-white CSS, tiny font sizes, or HTML comment tags making them invisible to the user but fully legible to the AI. When embedded in text destined for AI summarization, such hidden text's can manipulate the output in silent yet powerful ways—especially dangerous because users rely on summaries when skimming content quickly.
+- The twist: <b>Invisible prompt injection.</b> Here, prompts are hidden entirely via zero‑width characters, white-on-white CSS, tiny font sizes, or HTML comment tags making them invisible to the user but fully legible to the AI. When embedded in text destined for AI summarization, such hidden text's can manipulate the output in silent yet powerful ways—especially dangerous because users rely on summaries when skimming content quickly.
 
 > Google Gemini G-Suite Invisible Prompt Injection Vulnerability:
 
@@ -186,6 +186,12 @@ console.log(summary);
 <br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/2.jpeg)
 </br>
+> Prompt Overdose — Generic Summary
+
+- Prompt overdose is a technique used to manipulate the output of an AI language model by overwhelming its context window with a large volume of strategically crafted or repeated content.
+- The idea is to flood the model with consistent, high-density information—often fake or biased—with the intent of influencing the AI's attention and shaping its responses, particularly in summarization, completion, or classification tasks.
+- By saturating the prompt with targeted data, the attacker aims to override or marginalize legitimate context, effectively “poisoning” the AI's understanding or decision-making process.
+
 - We observed a strategic improvement in the outcome, indicating that our injection was successful through the use of the prompt overdose attack.
 <br>
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/3.jpeg)
@@ -200,4 +206,4 @@ console.log(summary);
 - The prompt overdose technique, though simple in principle, underscores just how easily language models can be steered when the right input balance is struck.
 - As AI continues to mediate the way we consume and trust information, it’s critical that developers, researchers, and users alike start questioning not just what AI says—but what it might have been quietly told to say.
 
-<b>Silent sabotage isn't science fiction—it's CSS.<b>
+<h3> Silent sabotage isn't science fiction—it's CSS.<h3>
