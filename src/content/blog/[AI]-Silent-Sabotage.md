@@ -1,6 +1,6 @@
 ---
 title: 'Silent Sabotage: How Hidden Prompts Can Hijack AI Summaries'
-description: 'AI Security'
+description: 'AI Security | ft Sider.ai,Google summarizer'
 pubDate: 'jul 31 2025'
 heroImage: '/mountain.jpg'
 pinned: false
@@ -230,6 +230,8 @@ In the working PoC, we crafted a hidden prompt repeatedly suggesting that the us
 
 <div style="position:relative;width:100%;padding-bottom:44.44%;height:0;overflow:hidden;"><iframe src="https://www.youtube.com/embed/7Oj50-Rjep4?si=LA3LFbx1KNVF6PKa" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YouTube video player"></iframe></div>
 <center><b>POC Video</b></center>
+
+- Just like the Gemini G-Suite vulnerability discussed earlier, it’s also possible to inject  hyperlinks—for example, embedding fake phishing alerts that trick users into clicking malicious links through AI-generated summaries.
 
 > Final Thoughts
 - <b>Invisible prompt injection<b> represents a quiet but deeply potent threat in the age of AI summarization. 
