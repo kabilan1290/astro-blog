@@ -214,7 +214,7 @@ In the PoC, we crafted a hidden prompt repeatedly suggesting that the user shoul
 
 - Under normal circumstances, a single hidden prompt might get ignored by the model due to lack of weight in the overall context. But here’s where prompt overdose changes the game: by injecting dozens or even hundreds of invisible instructions, we overwhelm the AI's context window, biasing its interpretation toward the attacker’s desired output.
 
-- The AI wasn’t just hallucinating; it was being steered to respond this way.
+- The AI wasn’t just hallucinating; it was being steered to respond this way in a scientifically nonsensical manner.
 
 <div style="position:relative;width:100%;padding-bottom:44.44%;height:0;overflow:hidden;"><iframe src="https://www.youtube.com/embed/7Oj50-Rjep4?si=LA3LFbx1KNVF6PKa" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YouTube video player"></iframe></div>
 <center><b>POC Video</b></center>
