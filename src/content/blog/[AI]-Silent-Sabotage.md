@@ -199,6 +199,15 @@ console.log(summary);
 
 - What makes this vector particularly insidious is its compatibility with otherwise legitimate-looking input: HTML emails, blog posts, and even collaborative documents.
 
+> Real-World Exploit: Sider AI Hijack through invisible prompt overdose
+
+- Even popular tools built to streamline research aren’t immune. In this section, we’ll walk through a real-world exploitation of Sider AI, a popular AI-powered browser extension
+<br>
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/ai-security/sider.jpeg)
+</br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7Oj50-Rjep4?si=LA3LFbx1KNVF6PKa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 > Final Thoughts
 - <b>Invisible prompt injection<b> represents a quiet but deeply potent threat in the age of AI summarization. 
 - As we’ve demonstrated, attackers don’t need flashy exploits—just cleverly hidden instructions embedded in plain-looking content. What makes this particularly dangerous is how seamlessly it blends into legitimate workflows, influencing summaries without ever alerting the user.
