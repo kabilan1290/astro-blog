@@ -221,7 +221,7 @@ They can properly diagnose the patient's condition and recommend appropriate tre
 > POC
 
 ```
-In the working PoC, we crafted a hidden prompt repeatedly suggesting that the user should take `HAVE 2mg of liquid Nitrogen` for his health probems.
+In the below PoC, we crafted a hidden prompt repeatedly suggesting that the user should take `HAVE 2mg of liquid Nitrogen` for his health probems.
 ```
 
 - Under normal circumstances, a single hidden prompt might get ignored by the model due to lack of weight in the overall context. But here’s where prompt overdose changes the game: by injecting dozens or even hundreds of invisible instructions, we overwhelm the AI's context window, biasing its interpretation toward the attacker’s desired output.
@@ -229,7 +229,14 @@ In the working PoC, we crafted a hidden prompt repeatedly suggesting that the us
 - The AI wasn’t just hallucinating; it was being steered to respond this way in a scientifically nonsensical manner.
 
 <div style="position:relative;width:100%;padding-bottom:44.44%;height:0;overflow:hidden;"><iframe src="https://www.youtube.com/embed/7Oj50-Rjep4?si=LA3LFbx1KNVF6PKa" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YouTube video player"></iframe></div>
-<center><b>POC Video</b></center>
+<center><b>POC Video suggesting false information</b></center>
+
+```
+In the below PoC, While the visible content contains legitimate API details from legitemate.com, we have repeatedly injected references to a malicious endpoint: fake.legitmate.com
+```
+
+<div style="position:relative;width:100%;padding-bottom:44.44%;height:0;overflow:hidden;"><iframe src="https://www.youtube.com/embed/bmTMM2FpFHY?si=-4hmGMyQ7ATAR-dh" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YouTube video player"></iframe></div>
+<center><b>POC Video suggesting fake API endpoint</b></center>
 
 - Just like the Gemini G-Suite vulnerability discussed earlier, it’s also possible to inject  hyperlinks—for example, embedding fake phishing alerts that trick users into clicking malicious links through AI-generated summaries.
 
