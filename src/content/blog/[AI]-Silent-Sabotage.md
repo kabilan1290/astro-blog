@@ -229,14 +229,22 @@ In the below PoC, we crafted a hidden prompt repeatedly suggesting that the user
 - The AI wasn’t just hallucinating; it was being steered to respond this way in a scientifically nonsensical manner.
 
 <div style="position:relative;width:100%;padding-bottom:44.44%;height:0;overflow:hidden;"><iframe src="https://www.youtube.com/embed/7Oj50-Rjep4?si=LA3LFbx1KNVF6PKa" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YouTube video player"></iframe></div>
-<center><b>POC Video suggesting false information</b></center>
+<center><b>POC Video on prompt overdose suggesting false information</b></center>
 
 ```
 In the below PoC, While the visible content contains legitimate API details from legitemate.com, we have repeatedly injected references to a malicious endpoint: fake.legitmate.com
 ```
 
 <div style="position:relative;width:100%;padding-bottom:44.44%;height:0;overflow:hidden;"><iframe src="https://www.youtube.com/embed/bmTMM2FpFHY?si=-4hmGMyQ7ATAR-dh" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YouTube video player"></iframe></div>
-<center><b>POC Video suggesting fake API endpoint</b></center>
+<center><b>POC Video on prompt overdose suggesting fake API endpoint</b></center>
+
+```
+In below PoC, while the visible content appears to contain horoscope information on tamil language, it has been crafted so that, when translated, it reveals output related to fictional war data instead.
+```
+
+<div style="position:relative;width:100%;padding-bottom:44.44%;height:0;overflow:hidden;"><iframe src="https://www.youtube.com/embed/1TZtVSlxUN8?si=6D6wy5wxaZp7O1vO" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YouTube video player"></iframe></div>
+<center><b>POC Video on prompt overdose suggesting fake translation</b></center>
+
 
 - Just like the Gemini G-Suite vulnerability discussed earlier, it’s also possible to inject  hyperlinks—for example, embedding fake phishing alerts that trick users into clicking malicious links through AI-generated summaries.
 
