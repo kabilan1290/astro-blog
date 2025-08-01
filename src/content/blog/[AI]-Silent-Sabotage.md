@@ -255,6 +255,7 @@ it reveals output related to fictional war data instead.
 <center><b>POC Video on prompt overdose suggesting fake translation</b></center>
 <br></br>
 
+- TBig thanks to [0xp1ain](https://x.com/0xp1ain) for motivating me to expand the examples.
 
 - Just like the Gemini G-Suite vulnerability discussed earlier, it’s also possible to inject  hyperlinks—for example, embedding fake phishing alerts that trick users into clicking malicious links through AI-generated summaries.
 
