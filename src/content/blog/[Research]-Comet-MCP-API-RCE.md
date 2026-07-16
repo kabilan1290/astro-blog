@@ -10,7 +10,7 @@ pinned: false
 
 ![Comet Browser](https://miro.medium.com/v2/resize:fit:1200/1*28_KiBdalMqBtGqcaOYqpg.jpeg)
 
-SquareX has discovered a critical security vulnerability in Comet, Perplexity's AI browser, that fundamentally compromises user trust and device security. Our research reveals that Comet has implemented an MCP API that allows its embedded extensions to execute arbitrary local commands on host devices without explicit user permission, capabilities that traditional browsers explicitly prohibit to confine the damage web threats can do to the browser.
+While working as a security researcher at SquareX, I discovered a critical security vulnerability in Comet, Perplexity's AI browser, that fundamentally compromises user trust and device security. My research reveals that Comet has implemented an MCP API that allows its embedded extensions to execute arbitrary local commands on host devices without explicit user permission, capabilities that traditional browsers explicitly prohibit to confine the damage web threats can do to the browser.
 
 The MCP API is poorly documented, leaving most users unaware that by installing the AI Browser, they implicitly allow Perplexity to establish a covert channel to access local data and systems. There is no mention of the MCP API in Comet's Terms & Conditions, nor is there any explicit statement on its website that the MCP API is made available by default to Comet's own embedded extension, or how it is being used. In fact, most users probably aren't even aware that Comet comes with two embedded extensions, because both extensions are hidden from the extensions dashboard.
 
@@ -20,16 +20,13 @@ This technical blog will first cover how the MCP API and embedded extensions wor
 
 ### Responsible Disclosure Timeline
 
-We contacted Perplexity to disclose the attack on Tuesday, November 4th, 2025. As of the writing of this blog, we have not heard back from Perplexity.
+I contacted Perplexity to disclose the attack on Tuesday, November 4th, 2025.
 
 - **04 Nov** — Submitted responsible disclosure on Perplexity's VDP on Bugcrowd
 - **19 Nov** — Tech blog published
-- **20 Nov** — Silent update by Comet disables MCP API. No official acknowledgement or response on Bugcrowd VDP yet
-- **21 Nov** — Perplexity acknowledged the silent update to press. Still no response on VDP report.
+- **20 Nov** — Silent update by Comet disables MCP API
 
 ![Silent Comet Update](https://miro.medium.com/v2/resize:fit:1400/1*oT8gZvQXqyLYm_aVqOXdCg.png)
-
-**Note from authors (20 Nov):** While we have yet to receive official acknowledgement from Perplexity on the VDP report, the most important outcome has been achieved — users are no longer vulnerable to exploitation via the MCP API. This is excellent news from a security standpoint, and we're pleased that our research has helped reduce the security exposure of the AI Browser. We hope to hear back from Perplexity on the patch soon and we remain committed to supporting them on security matters going forward.
 
 ### Understanding the MCP API and Embedded Extensions
 
@@ -55,7 +52,7 @@ Both extensions are only externally connected to multiple perplexity.ai subdomai
 - https://staging.perplexity.ai/*
 - https://*.preview.i.perplexity.ai/*
 
-We were able to discover these extensions through the `comet://system` flag. However, as they are hidden from the `comet://extension` dashboard, most users are unaware of these embedded extensions. In other words, these extensions were installed without the user's explicit permission, nor do they have the option to disable them.
+I was able to discover these extensions through the `comet://system` flag. However, as they are hidden from the `comet://extension` dashboard, most users are unaware of these embedded extensions. In other words, these extensions were installed without the user's explicit permission, nor do they have the option to disable them.
 
 ![No Extensions Visible](https://miro.medium.com/v2/resize:fit:1400/1*gL_4yKqBvH9qYx3lVb7oNg.png)
 
@@ -63,13 +60,13 @@ We were able to discover these extensions through the `comet://system` flag. How
 
 ### The MCP API
 
-In our exploration, we came across an MCP API (`chrome.perplexity.mcp.addStdioServer`) that allows the agentic extension of Comet browser to execute arbitrary commands on the host machine. Currently, both extensions can only communicate with perplexity.ai subdomains limiting the access of MCP API to said subdomains. However, given the limited official documentation, it is unclear how the MCP API is being used, as well as if and when this privilege is extended to other "trusted" sites.
+In my exploration, I came across an MCP API (`chrome.perplexity.mcp.addStdioServer`) that allows the agentic extension of Comet browser to execute arbitrary commands on the host machine. Currently, both extensions can only communicate with perplexity.ai subdomains limiting the access of MCP API to said subdomains. However, given the limited official documentation, it is unclear how the MCP API is being used, as well as if and when this privilege is extended to other "trusted" sites.
 
 Note that the embedded extensions have access to the MCP API by default, without any additional explicit user consent. This means that if an attacker gains access to the perplexity.ai domain or an eligible embedded extension, for example through a XSS attack or MitM network attack, they will be able to use the MCP API to control the victim's device, including executing ransomwares, exfiltrating data and monitoring user activity.
 
 ### Exploiting the MCP API to Execute Ransomware
 
-To illustrate the dangers of the MCP API, we have used an extension stomping attack to impersonate the Analytics Extension, which eventually led to WannaCry being executed at the endpoint. However, as discussed above, any attack that compromises the perplexity.ai domain or embedded extensions, will lead to the same outcome.
+To illustrate the dangers of the MCP API, I used an extension stomping attack to impersonate the Analytics Extension, which eventually led to WannaCry being executed at the endpoint. However, as discussed above, any attack that compromises the perplexity.ai domain or embedded extensions, will lead to the same outcome.
 
 **Part 1: Extension Stomping**
 
@@ -107,7 +104,7 @@ This attack fundamentally breaks the browser's sandbox isolation layer — a cor
 
 ### Are Other AI Browsers Affected?
 
-While other AI browsers also implement embedded extensions to power their agentic capabilities, we have only found the MCP API in Comet thus far. However, this discovery raises broader concerns about the AI browser ecosystem.
+While other AI browsers also implement embedded extensions to power their agentic capabilities, I have only found the MCP API in Comet thus far. However, this discovery raises broader concerns about the AI browser ecosystem.
 
 All AI Browser vendors share the same ambition: to build more powerful browsers that can execute complex agentic tasks. In the race to ship features quickly and remain competitive, speed often comes at the cost of proper documentation and security. The MCP API essentially allows AI Browser vendors to grant themselves, and potentially third parties in the future full access to devices, a privilege that was traditionally gated by explicit user consent in a regular consumer browser.
 
@@ -123,7 +120,7 @@ Unfortunately, as the MCP API is accessible by Comet's embedded extensions by de
 
 For extension stomping, device integrity measures can be put in place to prevent sideloading of extensions. However, as reiterated in this blog, extension stomping is just one way the API can be exploited.
 
-Thus, we recommend Perplexity and other AI browser vendors who may be developing similar features to:
+Thus, I recommend Perplexity and other AI browser vendors who may be developing similar features to:
 
 - Mandate disclosure for all APIs with documentation that clearly explains system-level capabilities
 - Undergo third-party security audits before releasing features that break traditional browser security models
@@ -133,11 +130,11 @@ Thus, we recommend Perplexity and other AI browser vendors who may be developing
 
 This vulnerability represents a fundamental breach of browser security principles. The MCP API, while potentially powerful for agentic capabilities, introduces unacceptable risks when implemented without proper safeguards, documentation, or user consent.
 
-The silent patch by Perplexity demonstrates the severity of the issue, though the lack of official acknowledgement raises questions about transparency in the AI browser ecosystem. As AI browsers continue to evolve, the security community must remain vigilant in ensuring these new technologies don't sacrifice user safety for innovation.
+The silent patch by Perplexity demonstrates the severity of the issue. As AI browsers continue to evolve, the security community must remain vigilant in ensuring these new technologies don't sacrifice user safety for innovation.
 
 ---
 
-**Research by:** SquareX Security Team<br>
+**Discovered while working as a Security Researcher at SquareX**<br>
 **Disclosure Date:** November 4, 2025<br>
 **Patch Date:** November 20, 2025<br>
 **Status:** Patched (silently)
