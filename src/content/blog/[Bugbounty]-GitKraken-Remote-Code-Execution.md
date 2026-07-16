@@ -8,7 +8,7 @@ pinned: false
 
 > Remote code execution in Gitkraken Desktop
 
-![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/1.png)
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/p1.jpeg)
 
 ### What is GitKraken?
 
