@@ -18,13 +18,6 @@ While there is no evidence that Perplexity is currently misusing this capability
 
 This technical blog will first cover how the MCP API and embedded extensions work, before diving into a full attack that successfully exploited Comet's MCP API to execute known malwares like Wannacry.
 
-### Responsible Disclosure Timeline
-
-I contacted Perplexity to disclose the attack on Tuesday, November 4th, 2025.
-
-- **04 Nov** — Submitted responsible disclosure on Perplexity's VDP on Bugcrowd
-- **19 Nov** — Tech blog published
-- **20 Nov** — Silent update by Comet disables MCP API
 
 ![Silent Comet Update](https://miro.medium.com/v2/resize:fit:1400/1*oT8gZvQXqyLYm_aVqOXdCg.png)
 
@@ -134,7 +127,4 @@ The silent patch by Perplexity demonstrates the severity of the issue. As AI bro
 
 ---
 
-**Discovered while working as a Security Researcher at SquareX**<br>
-**Disclosure Date:** November 4, 2025<br>
-**Patch Date:** November 20, 2025<br>
-**Status:** Patched (silently)
+

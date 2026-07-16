@@ -1,12 +1,12 @@
 ---
-title: 'Remote Code Execution in GitKraken Desktop'
+title: 'Remote Code Execution on GitKraken Desktop'
 description: 'RCE'
 pubDate: 'jul 16 2026'
 heroImage: '/mountain.jpg'
 pinned: false
 ---
 
-> Remote code execution in Gitkraken Desktop
+> Remote code execution on Gitkraken Desktop
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/p1.jpeg)
 
