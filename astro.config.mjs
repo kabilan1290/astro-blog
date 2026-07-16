@@ -1,6 +1,6 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
+// import sitemap from '@astrojs/sitemap';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 
@@ -18,5 +18,5 @@ export default defineConfig({
     service: passthroughImageService()
   },
   site: 'https://game0v3r.vercel.app',
-  integrations: [mdx(), sitemap(), solidJs()]
+  integrations: [mdx(), solidJs()]
 });
