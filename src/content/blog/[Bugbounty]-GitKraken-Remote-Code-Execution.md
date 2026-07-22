@@ -29,13 +29,13 @@ Whenever you're testing an Electron application, make sure to launch it with the
 
 Some Electron applications intentionally block startup flags such as `--remote-debugging-port`, treating them as dangerous. If the application does not enforce ASAR integrity, bypassing these restrictions is relatively straightforward through application tampering. However, when ASAR integrity is enabled, the Electron integrity fuse must first be defeated.
 
-> Below is an example code in asana electron app which does that.
+> Below is an example code in asana electron app which prevent running the flags.
 
 <center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/asana.png' width='600px' height='700px'></center>
 
 > Positron - Made to defeat electron asar integrity. 
 
-Around December 2025, I developed a tool called Positron that bypasses the asar integrity forever by pathcing through fuse flipping. That topic is outside the scope of this blog, but I may cover it in a future post.
+Around December 2025, I developed a tool called Positron that bypasses the asar integrity forever by pathcing through fuse flipping.
 
 <center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron1.png' width='600px' height='600px'></center>
 
@@ -52,6 +52,7 @@ Around December 2025, I developed a tool called Positron that bypasses the asar 
 > Positron patch the asar integrity fuse of the electron application
 
 You will allowed to run any modified content inside the patched application.
+That topic is outside the scope of this blog, but I may cover it in a future post.
 
 <br>
 
