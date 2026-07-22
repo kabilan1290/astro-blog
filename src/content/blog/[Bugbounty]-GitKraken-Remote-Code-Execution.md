@@ -58,7 +58,7 @@ That topic is outside the scope of this blog, but I may cover it in a future pos
 
 ### The vulnerability
 
-I found a way to execute arbitrary commands on a user's system by creating a specially crafted file and getting them to preview it in GitKraken. The attack chains three issues together: HTML injection, CSP bypass, and lack of context isolation.
+I found a way to execute arbitrary commands on a user's system by creating a specially crafted file and getting them to preview it in GitKraken. The attack chains three issues together: Dompurify misconfiguration to script injection, CSP bypass, and lack of context isolation.
 
 ### Step 1: Discovering HTML injection
 
@@ -73,10 +73,10 @@ The iframe loaded successfully in the preview. This confirmed we can embed ifram
 Then I tried the `srcdoc` attribute:
 
 ```html
-<iframe srcdoc="<h1>ஏதிலார் குற்றம்போல் தங்குற்றங் காண்கிற்பின் தீதுண்டோ மன்னும் உயிர்க்கு.</h1>"></iframe>
+<iframe srcdoc="<script></script><h1>ஏதிலார் குற்றம்போல் தங்குற்றங் காண்கிற்பின் தீதுண்டோ மன்னும் உயிர்க்கு.</h1>"></iframe>
 ```
 
-This worked and weirdly the data is not directly purified by dompurify (A misconfiguration here). The srcdoc attribute is interesting because it allows you to specify HTML content directly inline, creating a completely independent document context within the iframe. Unlike `src` which loads external content, `srcdoc` creates an isolated document with its own DOM, its own window object, and its own JavaScript execution context.
+This worked and weirdly the data is not directly purified by dompurify (a misconfiguration here). The srcdoc attribute is interesting because it allows you to specify HTML content directly inline, creating a completely independent document context within the iframe. Unlike `src` which loads external content, `srcdoc` creates an isolated document with its own DOM, its own window object, and its own JavaScript execution context.
 
 The key thing about srcdoc is that the content runs in the iframe's context, not the parent page. This means:
 - The iframe has its own `window` object
