@@ -2,7 +2,7 @@
 title: 'Remote Code Execution on GitKraken Desktop'
 description: 'RCE'
 pubDate: 'jul 16 2026'
-heroImage: '/mountain.jpg'
+heroImage: '/sanji.jpg'
 pinned: false
 ---
 
@@ -40,7 +40,7 @@ The iframe loaded successfully in the preview. This confirmed HTML injection, bu
 Then I tried the `srcdoc` attribute:
 
 ```html
-<iframe srcdoc="<h1>Test</h1>"></iframe>
+<iframe srcdoc="<h1>ஏதிலார் குற்றம்போல் தங்குற்றங் காண்கிற்பின் தீதுண்டோ மன்னும் உயிர்க்கு.</h1>"></iframe>
 ```
 
 This worked. The srcdoc attribute is interesting because it allows you to specify HTML content directly inline, creating a completely independent document context within the iframe. Unlike `src` which loads external content, `srcdoc` creates an isolated document with its own DOM, its own window object, and its own JavaScript execution context.
@@ -234,6 +234,8 @@ This vulnerability allows remote code execution with the same privileges as the 
 This vulnerability demonstrates how multiple small security issues can chain together to create a critical RCE. Each issue alone might seem minor, but combined they allow complete system compromise from a simple preview action.
 
 Gitkraken issued a fix for the issue in their latest version released on july 7th.
+
+![fix](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/kraken.jpeg)
 
 ---
 
