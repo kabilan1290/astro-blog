@@ -62,13 +62,13 @@ I found a way to execute arbitrary commands on a user's system by creating a spe
 
 ### Step 1: Discovering HTML injection
 
-I was testing GitKraken's preview feature and noticed it renders HTML. I tried embedding an iframe:
+Gitkraken has this feature to preview the readme file in repo,I was testing GitKraken's preview feature and noticed it renders HTML. I tried embedding an iframe:
 
 ```html
-<iframe src="https://example.com"></iframe>
+<iframe src="https://evil.com"></iframe>
 ```
 
-The iframe loaded successfully in the preview. This confirmed HTML injection, but I needed to explore further. I tested various iframe attributes to understand what works in this context.
+The iframe loaded successfully in the preview. This confirmed we can embed iframe, but I needed to explore further. I tested various iframe attributes to understand what works in this context and also there is dompurify so straightforward approach will be failed but i was still testing my luck here.
 
 Then I tried the `srcdoc` attribute:
 
@@ -76,7 +76,7 @@ Then I tried the `srcdoc` attribute:
 <iframe srcdoc="<h1>ஏதிலார் குற்றம்போல் தங்குற்றங் காண்கிற்பின் தீதுண்டோ மன்னும் உயிர்க்கு.</h1>"></iframe>
 ```
 
-This worked. The srcdoc attribute is interesting because it allows you to specify HTML content directly inline, creating a completely independent document context within the iframe. Unlike `src` which loads external content, `srcdoc` creates an isolated document with its own DOM, its own window object, and its own JavaScript execution context.
+This worked and weirdly the data is not directly purified by dompurify (A misconfiguration here). The srcdoc attribute is interesting because it allows you to specify HTML content directly inline, creating a completely independent document context within the iframe. Unlike `src` which loads external content, `srcdoc` creates an isolated document with its own DOM, its own window object, and its own JavaScript execution context.
 
 The key thing about srcdoc is that the content runs in the iframe's context, not the parent page. This means:
 - The iframe has its own `window` object
@@ -88,7 +88,7 @@ At this point, I am working inside the iframe's context. If I try to access `req
 
 ### Step 2: Bypassing Content Security Policy
 
-Now I needed JavaScript execution. I tried a basic script inside srcdoc:
+Now I needed JavaScript execution. I tried a basic script inside srcdoc and also note the whole the attack chain was possible because of multiple misconfiguration and we are starting with the dompurify misconfiguration:
 
 ```html
 <iframe srcdoc="<script>alert(1)</script>"></iframe>
@@ -100,6 +100,7 @@ Blocked. Content Security Policy prevented inline scripts. CSP is a browser secu
 script-src 'self' https://www.youtube.com
 ```
 
+Here comes the CSP misconfiguration.
 The policy allows scripts from the same origin (self) and from youtube.com. This is a common misconfiguration. Developers add youtube.com to allow embedded videos, but they do not realize YouTube hosts JSONP endpoints.
 
 JSONP (JSON with Padding) is a technique where a server wraps JSON data in a callback function. The client specifies the callback name in the URL, and the server returns executable JavaScript. YouTube's `/oembed` endpoint is a JSONP endpoint.
