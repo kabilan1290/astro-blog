@@ -1,6 +1,6 @@
 ---
 title: 'Remote Code Execution on GitKraken Desktop'
-description: 'RCE'
+description: 'youtube in csp? no context isolation? - easy RCE'
 pubDate: 'jul 16 2026'
 heroImage: '/sanji.jpg'
 pinned: false
