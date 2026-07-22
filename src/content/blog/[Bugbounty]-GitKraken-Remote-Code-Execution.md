@@ -27,7 +27,15 @@ The security challenge with Electron is managing the boundary between web conten
 
 Whenever you're testing an Electron application, make sure to launch it with the `--remote-debugging-port=9222` flag and connect to it via the Chrome DevTools Protocol (CDP). This allows you to inspect and monitor the application's background processes in real time, giving you better visibility into how it works during testing.
 
-![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/asana.png)
+Some Electron applications intentionally block startup flags such as `--remote-debugging-port`, treating them as dangerous. If the application does not enforce ASAR integrity, bypassing these restrictions is relatively straightforward through application tampering. However, when ASAR integrity is enabled, the Electron integrity fuse must first be defeated.
+
+> Below is an example code in asana electron app which does that.
+
+<img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/asana.png' width='400px' height='400px'>
+
+> Positron - Made to defeat electron asar integrity. 
+
+Around December 2025, I developed a tool called Positron that accomplishes this using fuse flipping. That topic is outside the scope of this blog, but I may cover it in a future post.
 
 ![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron1.png)
 
