@@ -1,6 +1,6 @@
 ---
 title: 'Remote Code Execution on GitKraken Desktop'
-description: 'Youtube in csp? No Context Isolation? - Easy RCE'
+description: 'Electron Security Misconfiguration'
 pubDate: 'jul 16 2026'
 heroImage: '/sanji.jpg'
 pinned: false
