@@ -31,17 +31,17 @@ Some Electron applications intentionally block startup flags such as `--remote-d
 
 > Below is an example code in asana electron app which does that.
 
-<img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/asana.png' width='400px' height='400px'>
+<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/asana.png' width='500px' height='500px'></center>
 
 > Positron - Made to defeat electron asar integrity. 
 
 Around December 2025, I developed a tool called Positron that accomplishes this using fuse flipping. That topic is outside the scope of this blog, but I may cover it in a future post.
 
-![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron1.png)
+<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron1.png' width='500px' height='500px'></center>
 
-![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron2.png)
+<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron2.png' width='500px' height='500px'></center>
 
-![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron3.png)
+<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron3.png' width='500px' height='500px'></center>
 
 ### The vulnerability
 
