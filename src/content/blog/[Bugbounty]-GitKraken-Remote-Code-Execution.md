@@ -23,6 +23,18 @@ Electron is a framework that lets developers build desktop applications using we
 
 The security challenge with Electron is managing the boundary between web content and Node.js capabilities. If not configured properly, malicious web content can access Node.js APIs and execute system commands.
 
+### Additional Note:
+
+Whenever you're testing an Electron application, make sure to launch it with the `--remote-debugging-port=9222` flag and connect to it via the Chrome DevTools Protocol (CDP). This allows you to inspect and monitor the application's background processes in real time, giving you better visibility into how it works during testing.
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/asana.png)
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron1.png)
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron2.png)
+
+![Description](https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron3.png)
+
 ### The vulnerability
 
 I found a way to execute arbitrary commands on a user's system by creating a specially crafted file and getting them to preview it in GitKraken. The attack chains three issues together: HTML injection, CSP bypass, and lack of context isolation.
