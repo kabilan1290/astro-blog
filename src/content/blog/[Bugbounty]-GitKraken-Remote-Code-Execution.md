@@ -1,6 +1,6 @@
 ---
 title: 'Remote Code Execution on GitKraken Desktop'
-description: 'Electron Security Misconfiguration'
+description: 'Electron Security Misconfiguration | Bugbounty'
 pubDate: 'jul 16 2026'
 heroImage: '/sanji.jpg'
 pinned: false
