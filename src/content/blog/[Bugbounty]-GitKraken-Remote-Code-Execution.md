@@ -35,7 +35,7 @@ Some Electron applications intentionally block startup flags such as `--remote-d
 
 > Positron - Made to defeat electron asar integrity. 
 
-Around December 2025, I developed a tool called Positron that accomplishes this using fuse flipping. That topic is outside the scope of this blog, but I may cover it in a future post.
+Around December 2025, I developed a tool called Positron that bypasses the asar integrity forever by pathcing through fuse flipping. That topic is outside the scope of this blog, but I may cover it in a future post.
 
 <center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron1.png' width='600px' height='600px'></center>
 
@@ -43,13 +43,15 @@ Around December 2025, I developed a tool called Positron that accomplishes this 
 <br>
 <center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron2.png' width='600px' height='600px'></center>
 
-> Positron read the fuses of the electorn application
+> Positron read the fuses of the electron application
 
 <br>
 
 <center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron3.png' width='600px' height='600px'></center>
 
 > Positron patch the asar integrity fuse of the electron application
+
+You will allowed to run any modified content inside the patched application.
 
 <br>
 
