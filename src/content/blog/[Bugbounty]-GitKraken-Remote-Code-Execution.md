@@ -31,17 +31,24 @@ Some Electron applications intentionally block startup flags such as `--remote-d
 
 > Below is an example code in asana electron app which does that.
 
-<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/asana.png' width='500px' height='500px'></center>
+<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/asana.png' width='600px' height='700px'></center>
 
 > Positron - Made to defeat electron asar integrity. 
 
 Around December 2025, I developed a tool called Positron that accomplishes this using fuse flipping. That topic is outside the scope of this blog, but I may cover it in a future post.
 
-<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron1.png' width='500px' height='500px'></center>
+<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron1.png' width='600px' height='700px'></center>
+> Interface of Positron
+<br>
+<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron2.png' width='600px' height='700px'></center>
+> Positron read the fuses of the electorn application
 
-<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron2.png' width='500px' height='500px'></center>
+<br>
 
-<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron3.png' width='500px' height='500px'></center>
+<center><img src='https://raw.githubusercontent.com/kabilan1290/astro-blog/master/public/positron3.png' width='600px' height='700px'></center>
+> Positron patch the asar integrity fuse of the electron application
+
+<br>
 
 ### The vulnerability
 
