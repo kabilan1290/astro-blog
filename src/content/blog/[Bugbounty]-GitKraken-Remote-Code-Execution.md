@@ -12,7 +12,7 @@ pinned: false
 
 ### What is GitKraken?
 
-![GitKraken RCE](https://mma.prnewswire.com/media/1630348/gitkraken_Logo.jpg?p=facebook)
+<center><img src='https://mma.prnewswire.com/media/1630348/gitkraken_Logo.jpg?p=facebook' width="100%" height="400px"> 
 
 GitKraken is a popular Git client used by developers to manage repositories. It provides a visual interface for Git operations and includes features like file editing with a preview function. When you edit files in GitKraken, you can click Preview to see how the file will look when rendered.
 
